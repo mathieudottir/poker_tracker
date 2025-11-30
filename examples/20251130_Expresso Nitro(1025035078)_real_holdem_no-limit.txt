@@ -1,0 +1,122 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492137262809089-1-1764498477 - Holdem no limit (10/20) - 2025/11/30 10:27:57 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: Daoud34 (300)
+Seat 3: Bestlife56 (300)
+*** ANTE/BLINDS ***
+Bestlife56 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Ad Ts]
+*** PRE-FLOP *** 
+Daoud34 calls 20
+Bestlife56 calls 10
+SIGRIDOTTIR raises 280 to 300 and is all-in
+Daoud34 folds
+Bestlife56 calls 280 and is all-in
+*** FLOP *** [4c 8c Jh]
+*** TURN *** [4c 8c Jh][3h]
+*** RIVER *** [4c 8c Jh 3h][4s]
+*** SHOW DOWN ***
+Bestlife56 shows [Qh Td] (One pair : 4)
+SIGRIDOTTIR shows [Ad Ts] (One pair : 4)
+SIGRIDOTTIR collected 620 from pot
+*** SUMMARY ***
+Total pot 620 | No rake
+Board: [4c 8c Jh 3h 4s]
+Seat 1: SIGRIDOTTIR (big blind) showed [Ad Ts] and won 620 with One pair : 4
+Seat 3: Bestlife56 (small blind) showed [Qh Td] and lost with One pair : 4
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492137262809089-2-1764498502 - Holdem no limit (10/20) - 2025/11/30 10:28:22 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (620)
+Seat 2: Daoud34 (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Daoud34 posts big blind 20
+Dealt to SIGRIDOTTIR [3s 8c]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+Daoud34 collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 2: Daoud34 (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492137262809089-3-1764498506 - Holdem no limit (10/20) - 2025/11/30 10:28:26 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (610)
+Seat 2: Daoud34 (290)
+*** ANTE/BLINDS ***
+Daoud34 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [5d Qc]
+*** PRE-FLOP *** 
+Daoud34 calls 10
+SIGRIDOTTIR raises 590 to 610 and is all-in
+Daoud34 folds
+SIGRIDOTTIR collected 630 from pot
+*** SUMMARY ***
+Total pot 630 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 630
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492137262809089-4-1764498520 - Holdem no limit (10/20) - 2025/11/30 10:28:40 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (630)
+Seat 2: Daoud34 (270)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Daoud34 posts big blind 20
+Dealt to SIGRIDOTTIR [6h Ks]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 610 to 630 and is all-in
+Daoud34 folds
+SIGRIDOTTIR collected 650 from pot
+*** SUMMARY ***
+Total pot 650 | No rake
+Seat 1: SIGRIDOTTIR (small blind) (button) won 650
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492137262809089-5-1764498534 - Holdem no limit (10/20) - 2025/11/30 10:28:54 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (650)
+Seat 2: Daoud34 (250)
+*** ANTE/BLINDS ***
+Daoud34 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Jc 3s]
+*** PRE-FLOP *** 
+Daoud34 raises 230 to 250 and is all-in
+SIGRIDOTTIR folds
+Daoud34 collected 270 from pot
+*** SUMMARY ***
+Total pot 270 | No rake
+Seat 2: Daoud34 (small blind) (button) won 270
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492137262809089-6-1764498541 - Holdem no limit (15/30) - 2025/11/30 10:29:01 UTC
+Table: 'Expresso Nitro(1025035078)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (630)
+Seat 2: Daoud34 (270)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+Daoud34 posts big blind 30
+Dealt to SIGRIDOTTIR [Kc Qc]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 600 to 630 and is all-in
+Daoud34 calls 240 and is all-in
+*** FLOP *** [4s 5d Qs]
+*** TURN *** [4s 5d Qs][5c]
+*** RIVER *** [4s 5d Qs 5c][7s]
+*** SHOW DOWN ***
+Daoud34 shows [8h 7h] (Two pairs : 7 and 5)
+SIGRIDOTTIR shows [Kc Qc] (Two pairs : Queens and 5)
+SIGRIDOTTIR collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [4s 5d Qs 5c 7s]
+Seat 1: SIGRIDOTTIR (small blind) (button) showed [Kc Qc] and won 900 with Two pairs : Queens and 5
+Seat 2: Daoud34 (big blind) showed [8h 7h] and lost with Two pairs : 7 and 5
+
+

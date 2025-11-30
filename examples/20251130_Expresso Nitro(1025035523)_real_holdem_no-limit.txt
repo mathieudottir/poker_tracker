@@ -1,0 +1,355 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494048523255809-1-1764498566 - Holdem no limit (10/20) - 2025/11/30 10:29:26 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #1 is the button
+Seat 1: YS-King82651 (300)
+Seat 2: Agadjou49 (300)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [2h 4d]
+*** PRE-FLOP *** 
+YS-King82651 calls 20
+Agadjou49 folds
+SIGRIDOTTIR checks
+*** FLOP *** [9d Th 8s]
+SIGRIDOTTIR checks
+YS-King82651 checks
+*** TURN *** [9d Th 8s][Td]
+SIGRIDOTTIR checks
+YS-King82651 bets 20
+SIGRIDOTTIR folds
+YS-King82651 collected 70 from pot
+*** SUMMARY ***
+Total pot 70 | No rake
+Board: [9d Th 8s Td]
+Seat 1: YS-King82651 (button) won 70
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494048523255809-2-1764498585 - Holdem no limit (10/20) - 2025/11/30 10:29:45 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 1: YS-King82651 (330)
+Seat 2: Agadjou49 (290)
+Seat 3: SIGRIDOTTIR (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+YS-King82651 posts big blind 20
+Dealt to SIGRIDOTTIR [Ad 2c]
+*** PRE-FLOP *** 
+Agadjou49 calls 20
+SIGRIDOTTIR folds
+YS-King82651 checks
+*** FLOP *** [Kc 3h 8s]
+YS-King82651 checks
+Agadjou49 checks
+*** TURN *** [Kc 3h 8s][Th]
+YS-King82651 checks
+Agadjou49 checks
+*** RIVER *** [Kc 3h 8s Th][2d]
+YS-King82651 bets 20
+Agadjou49 calls 20
+*** SHOW DOWN ***
+YS-King82651 shows [Jc 5s] (High card : King)
+Agadjou49 shows [Ks 7h] (One pair : Kings)
+Agadjou49 collected 90 from pot
+*** SUMMARY ***
+Total pot 90 | No rake
+Board: [Kc 3h 8s Th 2d]
+Seat 1: YS-King82651 (big blind) showed [Jc 5s] and lost with High card : King
+Seat 2: Agadjou49 (button) showed [Ks 7h] and won 90 with One pair : Kings
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494048523255809-3-1764498616 - Holdem no limit (10/20) - 2025/11/30 10:30:16 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 1: YS-King82651 (290)
+Seat 2: Agadjou49 (340)
+Seat 3: SIGRIDOTTIR (270)
+*** ANTE/BLINDS ***
+YS-King82651 posts small blind 10
+Agadjou49 posts big blind 20
+Dealt to SIGRIDOTTIR [Jh Jc]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 20 to 40
+YS-King82651 calls 30
+Agadjou49 calls 20
+*** FLOP *** [6h 9d Ad]
+YS-King82651 checks
+Agadjou49 checks
+SIGRIDOTTIR checks
+*** TURN *** [6h 9d Ad][8c]
+YS-King82651 checks
+Agadjou49 checks
+SIGRIDOTTIR checks
+*** RIVER *** [6h 9d Ad 8c][Qd]
+YS-King82651 bets 20
+Agadjou49 raises 280 to 300 and is all-in
+SIGRIDOTTIR folds
+YS-King82651 calls 230 and is all-in
+*** SHOW DOWN ***
+YS-King82651 shows [8s 6s] (Two pairs : 8 and 6)
+Agadjou49 shows [7d 8d] (Flush Ace high)
+Agadjou49 collected 670 from pot
+*** SUMMARY ***
+Total pot 670 | No rake
+Board: [6h 9d Ad 8c Qd]
+Seat 1: YS-King82651 (small blind) showed [8s 6s] and lost with Two pairs : 8 and 6
+Seat 2: Agadjou49 (big blind) showed [7d 8d] and won 670 with Flush Ace high
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494048523255809-4-1764498664 - Holdem no limit (15/30) - 2025/11/30 10:31:04 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (670)
+Seat 3: SIGRIDOTTIR (230)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [4c 8h]
+*** PRE-FLOP *** 
+Agadjou49 folds
+SIGRIDOTTIR collected 45 from pot
+*** SUMMARY ***
+Total pot 45 | No rake
+Seat 3: SIGRIDOTTIR (big blind) won 45
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494048523255809-5-1764498669 - Holdem no limit (15/30) - 2025/11/30 10:31:09 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (655)
+Seat 3: SIGRIDOTTIR (245)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+Agadjou49 posts big blind 30
+Dealt to SIGRIDOTTIR [5h 4h]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 215 to 245 and is all-in
+Agadjou49 folds
+SIGRIDOTTIR collected 275 from pot
+*** SUMMARY ***
+Total pot 275 | No rake
+Seat 3: SIGRIDOTTIR (small blind) (button) won 275
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494048523255809-6-1764498676 - Holdem no limit (15/30) - 2025/11/30 10:31:16 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (625)
+Seat 3: SIGRIDOTTIR (275)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [Qh Ts]
+*** PRE-FLOP *** 
+Agadjou49 folds
+SIGRIDOTTIR collected 45 from pot
+*** SUMMARY ***
+Total pot 45 | No rake
+Seat 3: SIGRIDOTTIR (big blind) won 45
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494048523255809-7-1764498681 - Holdem no limit (15/30) - 2025/11/30 10:31:21 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (610)
+Seat 3: SIGRIDOTTIR (290)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+Agadjou49 posts big blind 30
+Dealt to SIGRIDOTTIR [3d Ad]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 260 to 290 and is all-in
+Agadjou49 raises 320 to 610 and is all-in
+*** FLOP *** [8h Kh Tc]
+*** TURN *** [8h Kh Tc][As]
+*** RIVER *** [8h Kh Tc As][4c]
+*** SHOW DOWN ***
+Agadjou49 shows [5s Ks] (One pair : Kings)
+SIGRIDOTTIR shows [3d Ad] (One pair : Aces)
+SIGRIDOTTIR collected 580 from main pot
+Agadjou49 collected 320 from side pot 1
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [8h Kh Tc As 4c]
+Seat 2: Agadjou49 (big blind) showed [5s Ks] and won 320 with One pair : Kings
+Seat 3: SIGRIDOTTIR (small blind) (button) showed [3d Ad] and won 580 with One pair : Aces
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-8-1764498693 - Holdem no limit (20/40) - 2025/11/30 10:31:33 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (320)
+Seat 3: SIGRIDOTTIR (580)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 20
+SIGRIDOTTIR posts big blind 40
+Dealt to SIGRIDOTTIR [Jh 8h]
+*** PRE-FLOP *** 
+Agadjou49 raises 280 to 320 and is all-in
+SIGRIDOTTIR folds
+Agadjou49 collected 360 from pot
+*** SUMMARY ***
+Total pot 360 | No rake
+Seat 2: Agadjou49 (small blind) (button) won 360
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-9-1764498699 - Holdem no limit (20/40) - 2025/11/30 10:31:39 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (360)
+Seat 3: SIGRIDOTTIR (540)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+Agadjou49 posts big blind 40
+Dealt to SIGRIDOTTIR [8d 2s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR calls 20
+Agadjou49 checks
+*** FLOP *** [8c Qh 4d]
+Agadjou49 checks
+SIGRIDOTTIR bets 40
+Agadjou49 folds
+SIGRIDOTTIR collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | No rake
+Board: [8c Qh 4d]
+Seat 3: SIGRIDOTTIR (small blind) (button) won 120
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-10-1764498712 - Holdem no limit (20/40) - 2025/11/30 10:31:52 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (320)
+Seat 3: SIGRIDOTTIR (580)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 20
+SIGRIDOTTIR posts big blind 40
+Dealt to SIGRIDOTTIR [9d Ac]
+*** PRE-FLOP *** 
+Agadjou49 folds
+SIGRIDOTTIR collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | No rake
+Seat 3: SIGRIDOTTIR (big blind) won 60
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-11-1764498717 - Holdem no limit (20/40) - 2025/11/30 10:31:57 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (300)
+Seat 3: SIGRIDOTTIR (600)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+Agadjou49 posts big blind 40
+Dealt to SIGRIDOTTIR [2s Td]
+*** PRE-FLOP *** 
+SIGRIDOTTIR calls 20
+Agadjou49 checks
+*** FLOP *** [Ad Jh As]
+Agadjou49 checks
+SIGRIDOTTIR bets 40
+Agadjou49 folds
+SIGRIDOTTIR collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | No rake
+Board: [Ad Jh As]
+Seat 3: SIGRIDOTTIR (small blind) (button) won 120
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-12-1764498727 - Holdem no limit (20/40) - 2025/11/30 10:32:07 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (260)
+Seat 3: SIGRIDOTTIR (640)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 20
+SIGRIDOTTIR posts big blind 40
+Dealt to SIGRIDOTTIR [3d 6s]
+*** PRE-FLOP *** 
+Agadjou49 raises 220 to 260 and is all-in
+SIGRIDOTTIR folds
+Agadjou49 collected 300 from pot
+*** SUMMARY ***
+Total pot 300 | No rake
+Seat 2: Agadjou49 (small blind) (button) won 300
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402494048523255809-13-1764498733 - Holdem no limit (20/40) - 2025/11/30 10:32:13 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (300)
+Seat 3: SIGRIDOTTIR (600)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+Agadjou49 posts big blind 40
+Dealt to SIGRIDOTTIR [2d 3c]
+*** PRE-FLOP *** 
+SIGRIDOTTIR calls 20
+Agadjou49 checks
+*** FLOP *** [9d Kc Jc]
+Agadjou49 checks
+SIGRIDOTTIR bets 40
+Agadjou49 folds
+SIGRIDOTTIR collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | No rake
+Board: [9d Kc Jc]
+Seat 3: SIGRIDOTTIR (small blind) (button) won 120
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402494048523255809-14-1764498745 - Holdem no limit (30/60) - 2025/11/30 10:32:25 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (260)
+Seat 3: SIGRIDOTTIR (640)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 30
+SIGRIDOTTIR posts big blind 60
+Dealt to SIGRIDOTTIR [Ah 2c]
+*** PRE-FLOP *** 
+Agadjou49 folds
+SIGRIDOTTIR collected 90 from pot
+*** SUMMARY ***
+Total pot 90 | No rake
+Seat 3: SIGRIDOTTIR (big blind) won 90
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402494048523255809-15-1764498748 - Holdem no limit (30/60) - 2025/11/30 10:32:28 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #3 is the button
+Seat 2: Agadjou49 (230)
+Seat 3: SIGRIDOTTIR (670)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 30
+Agadjou49 posts big blind 60
+Dealt to SIGRIDOTTIR [8s Qh]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 610 to 670 and is all-in
+Agadjou49 calls 170 and is all-in
+*** FLOP *** [4c Kh 6h]
+*** TURN *** [4c Kh 6h][Js]
+*** RIVER *** [4c Kh 6h Js][5c]
+*** SHOW DOWN ***
+Agadjou49 shows [Ac Kd] (One pair : Kings)
+SIGRIDOTTIR shows [8s Qh] (High card : King)
+SIGRIDOTTIR collected 440 from side pot 1
+Agadjou49 collected 460 from main pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [4c Kh 6h Js 5c]
+Seat 2: Agadjou49 (big blind) showed [Ac Kd] and won 460 with One pair : Kings
+Seat 3: SIGRIDOTTIR (small blind) (button) showed [8s Qh] and won 440 with High card : King
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402494048523255809-16-1764498761 - Holdem no limit (30/60) - 2025/11/30 10:32:41 UTC
+Table: 'Expresso Nitro(1025035523)#0' 3-max (real money) Seat #2 is the button
+Seat 2: Agadjou49 (460)
+Seat 3: SIGRIDOTTIR (440)
+*** ANTE/BLINDS ***
+Agadjou49 posts small blind 30
+SIGRIDOTTIR posts big blind 60
+Dealt to SIGRIDOTTIR [Jc 9h]
+*** PRE-FLOP *** 
+Agadjou49 raises 400 to 460 and is all-in
+SIGRIDOTTIR calls 380 and is all-in
+*** FLOP *** [5d Qd 6d]
+*** TURN *** [5d Qd 6d][2h]
+*** RIVER *** [5d Qd 6d 2h][Kd]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [Jc 9h] (High card : King)
+Agadjou49 shows [6c Ks] (Two pairs : Kings and 6)
+Agadjou49 collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [5d Qd 6d 2h Kd]
+Seat 2: Agadjou49 (small blind) (button) showed [6c Ks] and won 900 with Two pairs : Kings and 6
+Seat 3: SIGRIDOTTIR (big blind) showed [Jc 9h] and lost with High card : King
+
+

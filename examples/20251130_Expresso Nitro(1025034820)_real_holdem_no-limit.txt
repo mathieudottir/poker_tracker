@@ -1,0 +1,179 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402491029161246721-1-1764498418 - Holdem no limit (10/20) - 2025/11/30 10:26:58 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: resident.js (300)
+Seat 3: AIR-Joker23 (300)
+*** ANTE/BLINDS ***
+AIR-Joker23 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Jh Tc]
+*** PRE-FLOP *** 
+resident.js calls 20
+AIR-Joker23 calls 10
+SIGRIDOTTIR checks
+*** FLOP *** [Kd 5h 5c]
+AIR-Joker23 checks
+SIGRIDOTTIR checks
+resident.js checks
+*** TURN *** [Kd 5h 5c][Th]
+AIR-Joker23 checks
+SIGRIDOTTIR checks
+resident.js bets 20
+AIR-Joker23 folds
+SIGRIDOTTIR calls 20
+*** RIVER *** [Kd 5h 5c Th][6s]
+SIGRIDOTTIR bets 40
+resident.js calls 40
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [Jh Tc] (Two pairs : Tens and 5)
+resident.js shows [Kc 7c] (Two pairs : Kings and 5)
+resident.js collected 180 from pot
+*** SUMMARY ***
+Total pot 180 | No rake
+Board: [Kd 5h 5c Th 6s]
+Seat 1: SIGRIDOTTIR (big blind) showed [Jh Tc] and lost with Two pairs : Tens and 5
+Seat 2: resident.js (button) showed [Kc 7c] and won 180 with Two pairs : Kings and 5
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402491029161246721-2-1764498466 - Holdem no limit (10/20) - 2025/11/30 10:27:46 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (220)
+Seat 2: resident.js (400)
+Seat 3: AIR-Joker23 (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+resident.js posts big blind 20
+Dealt to SIGRIDOTTIR [3c Ac]
+*** PRE-FLOP *** 
+AIR-Joker23 folds
+SIGRIDOTTIR raises 200 to 220 and is all-in
+resident.js folds
+SIGRIDOTTIR collected 240 from pot
+*** SUMMARY ***
+Total pot 240 | No rake
+Seat 1: SIGRIDOTTIR (small blind) won 240
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-3-1764498482 - Holdem no limit (15/30) - 2025/11/30 10:28:02 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (240)
+Seat 2: resident.js (380)
+Seat 3: AIR-Joker23 (280)
+*** ANTE/BLINDS ***
+resident.js posts small blind 15
+AIR-Joker23 posts big blind 30
+Dealt to SIGRIDOTTIR [Ac 2s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 210 to 240 and is all-in
+resident.js folds
+AIR-Joker23 folds
+SIGRIDOTTIR collected 285 from pot
+*** SUMMARY ***
+Total pot 285 | No rake
+Seat 1: SIGRIDOTTIR (button) won 285
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-4-1764498488 - Holdem no limit (15/30) - 2025/11/30 10:28:08 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (285)
+Seat 2: resident.js (365)
+Seat 3: AIR-Joker23 (250)
+*** ANTE/BLINDS ***
+AIR-Joker23 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [2h 6d]
+*** PRE-FLOP *** 
+resident.js folds
+AIR-Joker23 raises 30 to 60
+SIGRIDOTTIR folds
+AIR-Joker23 collected 90 from pot
+*** SUMMARY ***
+Total pot 90 | No rake
+Seat 3: AIR-Joker23 (small blind) won 90
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-5-1764498496 - Holdem no limit (15/30) - 2025/11/30 10:28:16 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (255)
+Seat 2: resident.js (365)
+Seat 3: AIR-Joker23 (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+resident.js posts big blind 30
+Dealt to SIGRIDOTTIR [5h 9s]
+*** PRE-FLOP *** 
+AIR-Joker23 raises 250 to 280 and is all-in
+SIGRIDOTTIR folds
+resident.js calls 250
+*** FLOP *** [Tc 3s Th]
+*** TURN *** [Tc 3s Th][Ts]
+*** RIVER *** [Tc 3s Th Ts][9c]
+*** SHOW DOWN ***
+AIR-Joker23 shows [2h As] (Trips of Tens)
+resident.js shows [Ac Jh] (Trips of Tens)
+resident.js collected 575 from pot
+*** SUMMARY ***
+Total pot 575 | No rake
+Board: [Tc 3s Th Ts 9c]
+Seat 2: resident.js (big blind) showed [Ac Jh] and won 575 with Trips of Tens
+Seat 3: AIR-Joker23 (button) showed [2h As] and lost with Trips of Tens
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-6-1764498511 - Holdem no limit (15/30) - 2025/11/30 10:28:31 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (240)
+Seat 2: resident.js (660)
+*** ANTE/BLINDS ***
+resident.js posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [6h 9h]
+*** PRE-FLOP *** 
+resident.js folds
+SIGRIDOTTIR collected 45 from pot
+*** SUMMARY ***
+Total pot 45 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 45
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-7-1764498516 - Holdem no limit (15/30) - 2025/11/30 10:28:36 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (255)
+Seat 2: resident.js (645)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+resident.js posts big blind 30
+Dealt to SIGRIDOTTIR [9h 2s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+resident.js collected 45 from pot
+*** SUMMARY ***
+Total pot 45 | No rake
+Seat 2: resident.js (big blind) won 45
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402491029161246721-8-1764498520 - Holdem no limit (15/30) - 2025/11/30 10:28:40 UTC
+Table: 'Expresso Nitro(1025034820)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (240)
+Seat 2: resident.js (660)
+*** ANTE/BLINDS ***
+resident.js posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [Js 6c]
+*** PRE-FLOP *** 
+resident.js calls 15
+SIGRIDOTTIR raises 210 to 240 and is all-in
+resident.js calls 210
+*** FLOP *** [5s 5c 2c]
+*** TURN *** [5s 5c 2c][2h]
+*** RIVER *** [5s 5c 2c 2h][9c]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [Js 6c] (Two pairs : 5 and 2)
+resident.js shows [8d 8c] (Two pairs : 8 and 5)
+resident.js collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | No rake
+Board: [5s 5c 2c 2h 9c]
+Seat 1: SIGRIDOTTIR (big blind) showed [Js 6c] and lost with Two pairs : 5 and 2
+Seat 2: resident.js (small blind) (button) showed [8d 8c] and won 480 with Two pairs : 8 and 5
+
+

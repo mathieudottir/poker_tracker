@@ -1,0 +1,218 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-1-1764498534 - Holdem no limit (10/20) - 2025/11/30 10:28:54 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: lapaixx (300)
+Seat 3: Polska10 (300)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 10
+Polska10 posts big blind 20
+Dealt to SIGRIDOTTIR [7h Ad]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 280 to 300 and is all-in
+lapaixx folds
+Polska10 folds
+SIGRIDOTTIR collected 330 from pot
+*** SUMMARY ***
+Total pot 330 | No rake
+Seat 1: SIGRIDOTTIR (button) won 330
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-2-1764498547 - Holdem no limit (10/20) - 2025/11/30 10:29:07 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (330)
+Seat 2: lapaixx (290)
+Seat 3: Polska10 (280)
+*** ANTE/BLINDS ***
+Polska10 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [7c Ts]
+*** PRE-FLOP *** 
+lapaixx folds
+Polska10 folds
+SIGRIDOTTIR collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-3-1764498553 - Holdem no limit (10/20) - 2025/11/30 10:29:13 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (340)
+Seat 2: lapaixx (290)
+Seat 3: Polska10 (270)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+lapaixx posts big blind 20
+Dealt to SIGRIDOTTIR [8c 5h]
+*** PRE-FLOP *** 
+Polska10 calls 20
+SIGRIDOTTIR folds
+lapaixx raises 270 to 290 and is all-in
+Polska10 folds
+lapaixx collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | No rake
+Seat 2: lapaixx (big blind) won 320
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-4-1764498565 - Holdem no limit (10/20) - 2025/11/30 10:29:25 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (330)
+Seat 2: lapaixx (320)
+Seat 3: Polska10 (250)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 10
+Polska10 posts big blind 20
+Dealt to SIGRIDOTTIR [Kd Qh]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 310 to 330 and is all-in
+lapaixx folds
+Polska10 folds
+SIGRIDOTTIR collected 360 from pot
+*** SUMMARY ***
+Total pot 360 | No rake
+Seat 1: SIGRIDOTTIR (button) won 360
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-5-1764498572 - Holdem no limit (10/20) - 2025/11/30 10:29:32 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (360)
+Seat 2: lapaixx (310)
+Seat 3: Polska10 (230)
+*** ANTE/BLINDS ***
+Polska10 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [3s 2c]
+*** PRE-FLOP *** 
+lapaixx raises 20 to 40
+Polska10 calls 30
+SIGRIDOTTIR folds
+*** FLOP *** [Jc 8s 9d]
+Polska10 bets 100
+lapaixx folds
+Polska10 collected 200 from pot
+*** SUMMARY ***
+Total pot 200 | No rake
+Board: [Jc 8s 9d]
+Seat 3: Polska10 (small blind) won 200
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493275429142529-6-1764498586 - Holdem no limit (10/20) - 2025/11/30 10:29:46 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (340)
+Seat 2: lapaixx (270)
+Seat 3: Polska10 (290)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+lapaixx posts big blind 20
+Dealt to SIGRIDOTTIR [Td Kd]
+*** PRE-FLOP *** 
+Polska10 folds
+SIGRIDOTTIR raises 20 to 40
+lapaixx calls 20
+*** FLOP *** [9s Tc Qs]
+SIGRIDOTTIR bets 20
+lapaixx calls 20
+*** TURN *** [9s Tc Qs][6h]
+SIGRIDOTTIR checks
+lapaixx bets 60
+SIGRIDOTTIR folds
+lapaixx collected 180 from pot
+*** SUMMARY ***
+Total pot 180 | No rake
+Board: [9s Tc Qs 6h]
+Seat 2: lapaixx (big blind) won 180
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402493275429142529-7-1764498610 - Holdem no limit (15/30) - 2025/11/30 10:30:10 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (280)
+Seat 2: lapaixx (330)
+Seat 3: Polska10 (290)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 15
+Polska10 posts big blind 30
+Dealt to SIGRIDOTTIR [Js 5h]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+lapaixx calls 15
+Polska10 checks
+*** FLOP *** [7s 2d 9c]
+lapaixx bets 30
+Polska10 calls 30
+*** TURN *** [7s 2d 9c][5s]
+lapaixx bets 42
+Polska10 raises 188 to 230 and is all-in
+lapaixx folds
+Polska10 collected 392 from pot
+*** SUMMARY ***
+Total pot 392 | No rake
+Board: [7s 2d 9c 5s]
+Seat 3: Polska10 (big blind) won 392
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402493275429142529-8-1764498641 - Holdem no limit (15/30) - 2025/11/30 10:30:41 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (280)
+Seat 2: lapaixx (228)
+Seat 3: Polska10 (392)
+*** ANTE/BLINDS ***
+Polska10 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [Tc 9c]
+*** PRE-FLOP *** 
+lapaixx folds
+Polska10 calls 15
+SIGRIDOTTIR raises 250 to 280 and is all-in
+Polska10 folds
+SIGRIDOTTIR collected 310 from pot
+*** SUMMARY ***
+Total pot 310 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 310
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402493275429142529-9-1764498658 - Holdem no limit (20/40) - 2025/11/30 10:30:58 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (310)
+Seat 2: lapaixx (228)
+Seat 3: Polska10 (362)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+lapaixx posts big blind 40
+Dealt to SIGRIDOTTIR [Th 3c]
+*** PRE-FLOP *** 
+Polska10 folds
+SIGRIDOTTIR folds
+lapaixx collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | No rake
+Seat 2: lapaixx (big blind) won 60
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402493275429142529-10-1764498665 - Holdem no limit (20/40) - 2025/11/30 10:31:05 UTC
+Table: 'Expresso Nitro(1025035343)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (290)
+Seat 2: lapaixx (248)
+Seat 3: Polska10 (362)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 20
+Polska10 posts big blind 40
+Dealt to SIGRIDOTTIR [As 4d]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 250 to 290 and is all-in
+lapaixx folds
+Polska10 calls 250
+*** FLOP *** [7h 6d 8c]
+*** TURN *** [7h 6d 8c][7d]
+*** RIVER *** [7h 6d 8c 7d][3d]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [As 4d] (One pair : 7)
+Polska10 shows [Jd 9d] (Flush Jack high)
+Polska10 collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | No rake
+Board: [7h 6d 8c 7d 3d]
+Seat 1: SIGRIDOTTIR (button) showed [As 4d] and lost with One pair : 7
+Seat 3: Polska10 (big blind) showed [Jd 9d] and won 600 with Flush Jack high
+
+

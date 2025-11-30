@@ -1,0 +1,167 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-1-1764498516 - Holdem no limit (10/20) - 2025/11/30 10:28:36 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: Tekbreizh (300)
+Seat 3: NikosimsHrt (300)
+*** ANTE/BLINDS ***
+NikosimsHrt posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Jc 5s]
+*** PRE-FLOP *** 
+Tekbreizh folds
+NikosimsHrt folds
+SIGRIDOTTIR collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-2-1764498522 - Holdem no limit (10/20) - 2025/11/30 10:28:42 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (310)
+Seat 2: Tekbreizh (300)
+Seat 3: NikosimsHrt (290)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Tekbreizh posts big blind 20
+Dealt to SIGRIDOTTIR [3h 9h]
+*** PRE-FLOP *** 
+NikosimsHrt folds
+SIGRIDOTTIR raises 290 to 310 and is all-in
+Tekbreizh folds
+SIGRIDOTTIR collected 330 from pot
+*** SUMMARY ***
+Total pot 330 | No rake
+Seat 1: SIGRIDOTTIR (small blind) won 330
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-3-1764498534 - Holdem no limit (10/20) - 2025/11/30 10:28:54 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (330)
+Seat 2: Tekbreizh (280)
+Seat 3: NikosimsHrt (290)
+*** ANTE/BLINDS ***
+Tekbreizh posts small blind 10
+NikosimsHrt posts big blind 20
+Dealt to SIGRIDOTTIR [Jc 6c]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 310 to 330 and is all-in
+Tekbreizh folds
+NikosimsHrt folds
+SIGRIDOTTIR collected 360 from pot
+*** SUMMARY ***
+Total pot 360 | No rake
+Seat 1: SIGRIDOTTIR (button) won 360
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-4-1764498545 - Holdem no limit (10/20) - 2025/11/30 10:29:05 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (360)
+Seat 2: Tekbreizh (270)
+Seat 3: NikosimsHrt (270)
+*** ANTE/BLINDS ***
+NikosimsHrt posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [9s Ac]
+*** PRE-FLOP *** 
+Tekbreizh folds
+NikosimsHrt folds
+SIGRIDOTTIR collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 1: SIGRIDOTTIR (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-5-1764498550 - Holdem no limit (10/20) - 2025/11/30 10:29:10 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (370)
+Seat 2: Tekbreizh (270)
+Seat 3: NikosimsHrt (260)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Tekbreizh posts big blind 20
+Dealt to SIGRIDOTTIR [2s 7d]
+*** PRE-FLOP *** 
+NikosimsHrt raises 240 to 260 and is all-in
+SIGRIDOTTIR folds
+Tekbreizh folds
+NikosimsHrt collected 290 from pot
+*** SUMMARY ***
+Total pot 290 | No rake
+Seat 3: NikosimsHrt (button) won 290
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-6-1764498556 - Holdem no limit (10/20) - 2025/11/30 10:29:16 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (360)
+Seat 2: Tekbreizh (250)
+Seat 3: NikosimsHrt (290)
+*** ANTE/BLINDS ***
+Tekbreizh posts small blind 10
+NikosimsHrt posts big blind 20
+Dealt to SIGRIDOTTIR [As Js]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 340 to 360 and is all-in
+Tekbreizh folds
+NikosimsHrt calls 270 and is all-in
+*** FLOP *** [8s 8h Th]
+*** TURN *** [8s 8h Th][3s]
+*** RIVER *** [8s 8h Th 3s][6c]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [As Js] (One pair : 8)
+NikosimsHrt shows [4c 4s] (Two pairs : 8 and 4)
+NikosimsHrt collected 590 from main pot
+SIGRIDOTTIR collected 70 from side pot 1
+*** SUMMARY ***
+Total pot 660 | No rake
+Board: [8s 8h Th 3s 6c]
+Seat 1: SIGRIDOTTIR (button) showed [As Js] and won 70 with One pair : 8
+Seat 3: NikosimsHrt (big blind) showed [4c 4s] and won 590 with Two pairs : 8 and 4
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492923241824257-7-1764498569 - Holdem no limit (10/20) - 2025/11/30 10:29:29 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (70)
+Seat 2: Tekbreizh (240)
+Seat 3: NikosimsHrt (590)
+*** ANTE/BLINDS ***
+NikosimsHrt posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [4s 3d]
+*** PRE-FLOP *** 
+Tekbreizh raises 220 to 240 and is all-in
+NikosimsHrt folds
+SIGRIDOTTIR folds
+Tekbreizh collected 270 from pot
+*** SUMMARY ***
+Total pot 270 | No rake
+Seat 2: Tekbreizh (button) won 270
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492923241824257-8-1764498576 - Holdem no limit (15/30) - 2025/11/30 10:29:36 UTC
+Table: 'Expresso Nitro(1025035261)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (50)
+Seat 2: Tekbreizh (270)
+Seat 3: NikosimsHrt (580)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+Tekbreizh posts big blind 30
+Dealt to SIGRIDOTTIR [5d 4h]
+*** PRE-FLOP *** 
+NikosimsHrt raises 30 to 60
+SIGRIDOTTIR calls 35 and is all-in
+Tekbreizh folds
+*** FLOP *** [Kc 2h Ad]
+*** TURN *** [Kc 2h Ad][7d]
+*** RIVER *** [Kc 2h Ad 7d][9s]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [5d 4h] (High card : Ace)
+NikosimsHrt shows [7s 8c] (One pair : 7)
+NikosimsHrt collected 140 from pot
+*** SUMMARY ***
+Total pot 140 | No rake
+Board: [Kc 2h Ad 7d 9s]
+Seat 1: SIGRIDOTTIR (small blind) showed [5d 4h] and lost with High card : Ace
+Seat 3: NikosimsHrt (button) showed [7s 8c] and won 140 with One pair : 7
+
+

@@ -1,0 +1,67 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495989848473601-1-1764498652 - Holdem no limit (10/20) - 2025/11/30 10:30:52 UTC
+Table: 'Expresso Nitro(1025035975)#0' 3-max (real money) Seat #1 is the button
+Seat 1: Cunni Lingot (300)
+Seat 2: Batox_x (300)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+Batox_x posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [2c Qd]
+*** PRE-FLOP *** 
+Cunni Lingot raises 20 to 40
+Batox_x folds
+SIGRIDOTTIR folds
+Cunni Lingot collected 70 from pot
+*** SUMMARY ***
+Total pot 70 | No rake
+Seat 1: Cunni Lingot (button) won 70
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495989848473601-2-1764498663 - Holdem no limit (10/20) - 2025/11/30 10:31:03 UTC
+Table: 'Expresso Nitro(1025035975)#0' 3-max (real money) Seat #2 is the button
+Seat 1: Cunni Lingot (330)
+Seat 2: Batox_x (290)
+Seat 3: SIGRIDOTTIR (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Cunni Lingot posts big blind 20
+Dealt to SIGRIDOTTIR [Th 6c]
+*** PRE-FLOP *** 
+Batox_x raises 270 to 290 and is all-in
+SIGRIDOTTIR folds
+Cunni Lingot folds
+Batox_x collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | No rake
+Seat 2: Batox_x (button) won 320
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495989848473601-3-1764498670 - Holdem no limit (10/20) - 2025/11/30 10:31:10 UTC
+Table: 'Expresso Nitro(1025035975)#0' 3-max (real money) Seat #3 is the button
+Seat 1: Cunni Lingot (310)
+Seat 2: Batox_x (320)
+Seat 3: SIGRIDOTTIR (270)
+*** ANTE/BLINDS ***
+Cunni Lingot posts small blind 10
+Batox_x posts big blind 20
+Dealt to SIGRIDOTTIR [Ts Qc]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 250 to 270 and is all-in
+Cunni Lingot raises 40 to 310 and is all-in
+Batox_x calls 290
+*** FLOP *** [9h 2d 8d]
+*** TURN *** [9h 2d 8d][4h]
+*** RIVER *** [9h 2d 8d 4h][Kc]
+*** SHOW DOWN ***
+Batox_x shows [7s Ac] (High card : Ace)
+SIGRIDOTTIR shows [Ts Qc] (High card : King)
+Cunni Lingot shows [9s 9d] (Trips of 9)
+Cunni Lingot collected 890 from pot
+*** SUMMARY ***
+Total pot 890 | No rake
+Board: [9h 2d 8d 4h Kc]
+Seat 1: Cunni Lingot (small blind) showed [9s 9d] and won 890 with Trips of 9
+Seat 2: Batox_x (big blind) showed [7s Ac] and lost with High card : Ace
+Seat 3: SIGRIDOTTIR (button) showed [Ts Qc] and lost with High card : King
+
+

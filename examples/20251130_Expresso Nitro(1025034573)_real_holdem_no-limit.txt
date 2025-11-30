@@ -1,0 +1,93 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402489968304324609-1-1764498371 - Holdem no limit (10/20) - 2025/11/30 10:26:11 UTC
+Table: 'Expresso Nitro(1025034573)#0' 3-max (real money) Seat #3 is the button
+Seat 1: Magzybogues (300)
+Seat 2: SIGRIDOTTIR (300)
+Seat 3: loyal.370444 (300)
+*** ANTE/BLINDS ***
+Magzybogues posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Ts 8s]
+*** PRE-FLOP *** 
+loyal.370444 folds
+Magzybogues raises 40 to 60
+SIGRIDOTTIR calls 40
+*** FLOP *** [2c 8h 5d]
+Magzybogues bets 42
+SIGRIDOTTIR raises 58 to 100
+Magzybogues calls 58
+*** TURN *** [2c 8h 5d][Ks]
+Magzybogues checks
+SIGRIDOTTIR bets 140 and is all-in
+Magzybogues calls 140 and is all-in
+*** RIVER *** [2c 8h 5d Ks][8d]
+*** SHOW DOWN ***
+Magzybogues shows [Kc Js] (Two pairs : Kings and 8)
+SIGRIDOTTIR shows [Ts 8s] (Trips of 8)
+SIGRIDOTTIR collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | No rake
+Board: [2c 8h 5d Ks 8d]
+Seat 1: Magzybogues (small blind) showed [Kc Js] and lost with Two pairs : Kings and 8
+Seat 2: SIGRIDOTTIR (big blind) showed [Ts 8s] and won 600 with Trips of 8
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402489968304324609-2-1764498400 - Holdem no limit (10/20) - 2025/11/30 10:26:40 UTC
+Table: 'Expresso Nitro(1025034573)#0' 3-max (real money) Seat #2 is the button
+Seat 2: SIGRIDOTTIR (600)
+Seat 3: loyal.370444 (300)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+loyal.370444 posts big blind 20
+Dealt to SIGRIDOTTIR [6s Jh]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 20 to 40
+loyal.370444 calls 20
+*** FLOP *** [3s 2h Ac]
+loyal.370444 checks
+SIGRIDOTTIR bets 20
+loyal.370444 calls 20
+*** TURN *** [3s 2h Ac][Qd]
+loyal.370444 checks
+SIGRIDOTTIR checks
+*** RIVER *** [3s 2h Ac Qd][8c]
+loyal.370444 checks
+SIGRIDOTTIR bets 60
+loyal.370444 folds
+SIGRIDOTTIR collected 180 from pot
+*** SUMMARY ***
+Total pot 180 | No rake
+Board: [3s 2h Ac Qd 8c]
+Seat 2: SIGRIDOTTIR (small blind) (button) won 180
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402489968304324609-3-1764498421 - Holdem no limit (10/20) - 2025/11/30 10:27:01 UTC
+Table: 'Expresso Nitro(1025034573)#0' 3-max (real money) Seat #3 is the button
+Seat 2: SIGRIDOTTIR (660)
+Seat 3: loyal.370444 (240)
+*** ANTE/BLINDS ***
+loyal.370444 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Td Tc]
+*** PRE-FLOP *** 
+loyal.370444 calls 10
+SIGRIDOTTIR raises 40 to 60
+loyal.370444 calls 40
+*** FLOP *** [Ts 8d Ac]
+SIGRIDOTTIR checks
+loyal.370444 checks
+*** TURN *** [Ts 8d Ac][7d]
+SIGRIDOTTIR bets 70
+loyal.370444 raises 110 to 180 and is all-in
+SIGRIDOTTIR calls 110
+*** RIVER *** [Ts 8d Ac 7d][3d]
+*** SHOW DOWN ***
+loyal.370444 shows [7s Qh] (One pair : 7)
+SIGRIDOTTIR shows [Td Tc] (Trips of Tens)
+SIGRIDOTTIR collected 480 from pot
+*** SUMMARY ***
+Total pot 480 | No rake
+Board: [Ts 8d Ac 7d 3d]
+Seat 2: SIGRIDOTTIR (big blind) showed [Td Tc] and won 480 with Trips of Tens
+Seat 3: loyal.370444 (small blind) (button) showed [7s Qh] and lost with One pair : 7
+
+

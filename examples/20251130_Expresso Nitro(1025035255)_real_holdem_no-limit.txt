@@ -1,0 +1,132 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492897472020481-1-1764498514 - Holdem no limit (10/20) - 2025/11/30 10:28:34 UTC
+Table: 'Expresso Nitro(1025035255)#0' 3-max (real money) Seat #2 is the button
+Seat 1: Mambatata80 (300)
+Seat 2: SIGRIDOTTIR (300)
+Seat 3: Fackio (300)
+*** ANTE/BLINDS ***
+Fackio posts small blind 10
+Mambatata80 posts big blind 20
+Dealt to SIGRIDOTTIR [9h 5s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+Fackio calls 10
+Mambatata80 checks
+*** FLOP *** [Kc 9s 5d]
+Fackio bets 20
+Mambatata80 raises 80 to 100
+Fackio folds
+Mambatata80 collected 160 from pot
+*** SUMMARY ***
+Total pot 160 | No rake
+Board: [Kc 9s 5d]
+Seat 1: Mambatata80 (big blind) won 160
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492897472020481-2-1764498531 - Holdem no limit (10/20) - 2025/11/30 10:28:51 UTC
+Table: 'Expresso Nitro(1025035255)#0' 3-max (real money) Seat #3 is the button
+Seat 1: Mambatata80 (340)
+Seat 2: SIGRIDOTTIR (300)
+Seat 3: Fackio (260)
+*** ANTE/BLINDS ***
+Mambatata80 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [5s Qs]
+*** PRE-FLOP *** 
+Fackio folds
+Mambatata80 calls 10
+SIGRIDOTTIR raises 280 to 300 and is all-in
+Mambatata80 folds
+SIGRIDOTTIR collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | No rake
+Seat 2: SIGRIDOTTIR (big blind) won 320
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492897472020481-3-1764498547 - Holdem no limit (10/20) - 2025/11/30 10:29:07 UTC
+Table: 'Expresso Nitro(1025035255)#0' 3-max (real money) Seat #1 is the button
+Seat 1: Mambatata80 (320)
+Seat 2: SIGRIDOTTIR (320)
+Seat 3: Fackio (260)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Fackio posts big blind 20
+Dealt to SIGRIDOTTIR [Th 8s]
+*** PRE-FLOP *** 
+Mambatata80 folds
+SIGRIDOTTIR raises 300 to 320 and is all-in
+Fackio calls 240 and is all-in
+*** FLOP *** [Ah 4c Ad]
+*** TURN *** [Ah 4c Ad][Ts]
+*** RIVER *** [Ah 4c Ad Ts][7s]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [Th 8s] (Two pairs : Aces and Tens)
+Fackio shows [Kd Ks] (Two pairs : Aces and Kings)
+Fackio collected 520 from main pot
+SIGRIDOTTIR collected 60 from side pot 1
+*** SUMMARY ***
+Total pot 580 | No rake
+Board: [Ah 4c Ad Ts 7s]
+Seat 2: SIGRIDOTTIR (small blind) showed [Th 8s] and won 60 with Two pairs : Aces and Tens
+Seat 3: Fackio (big blind) showed [Kd Ks] and won 520 with Two pairs : Aces and Kings
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492897472020481-4-1764498561 - Holdem no limit (10/20) - 2025/11/30 10:29:21 UTC
+Table: 'Expresso Nitro(1025035255)#0' 3-max (real money) Seat #2 is the button
+Seat 1: Mambatata80 (320)
+Seat 2: SIGRIDOTTIR (60)
+Seat 3: Fackio (520)
+*** ANTE/BLINDS ***
+Fackio posts small blind 10
+Mambatata80 posts big blind 20
+Dealt to SIGRIDOTTIR [Td 8h]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+Fackio calls 10
+Mambatata80 checks
+*** FLOP *** [3h As 6c]
+Fackio bets 20
+Mambatata80 calls 20
+*** TURN *** [3h As 6c][Qc]
+Fackio checks
+Mambatata80 checks
+*** RIVER *** [3h As 6c Qc][Tc]
+Fackio checks
+Mambatata80 checks
+*** SHOW DOWN ***
+Mambatata80 shows [4h 3d] (One pair : 3)
+Fackio shows [6d Jd] (One pair : 6)
+Fackio collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | No rake
+Board: [3h As 6c Qc Tc]
+Seat 1: Mambatata80 (big blind) showed [4h 3d] and lost with One pair : 3
+Seat 3: Fackio (small blind) showed [6d Jd] and won 80 with One pair : 6
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492897472020481-5-1764498584 - Holdem no limit (15/30) - 2025/11/30 10:29:44 UTC
+Table: 'Expresso Nitro(1025035255)#0' 3-max (real money) Seat #3 is the button
+Seat 1: Mambatata80 (280)
+Seat 2: SIGRIDOTTIR (60)
+Seat 3: Fackio (560)
+*** ANTE/BLINDS ***
+Mambatata80 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [7c 6s]
+*** PRE-FLOP *** 
+Fackio folds
+Mambatata80 raises 250 to 280 and is all-in
+SIGRIDOTTIR calls 30 and is all-in
+*** FLOP *** [9d 4h Td]
+*** TURN *** [9d 4h Td][3h]
+*** RIVER *** [9d 4h Td 3h][Jc]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [7c 6s] (High card : Jack)
+Mambatata80 shows [Kd 8c] (High card : King)
+Mambatata80 collected 340 from pot
+*** SUMMARY ***
+Total pot 340 | No rake
+Board: [9d 4h Td 3h Jc]
+Seat 1: Mambatata80 (small blind) showed [Kd 8c] and won 340 with High card : King
+Seat 2: SIGRIDOTTIR (big blind) showed [7c 6s] and lost with High card : Jack
+
+

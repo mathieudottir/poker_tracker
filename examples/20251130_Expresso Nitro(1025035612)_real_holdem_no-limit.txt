@@ -1,0 +1,142 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494430775345153-1-1764498583 - Holdem no limit (10/20) - 2025/11/30 10:29:43 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #1 is the button
+Seat 1: lapaixx (300)
+Seat 2: LeGrizz13 (300)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+LeGrizz13 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Jh 3c]
+*** PRE-FLOP *** 
+lapaixx raises 280 to 300 and is all-in
+LeGrizz13 folds
+SIGRIDOTTIR folds
+lapaixx collected 330 from pot
+*** SUMMARY ***
+Total pot 330 | No rake
+Seat 1: lapaixx (button) won 330
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494430775345153-2-1764498592 - Holdem no limit (10/20) - 2025/11/30 10:29:52 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #2 is the button
+Seat 1: lapaixx (330)
+Seat 2: LeGrizz13 (290)
+Seat 3: SIGRIDOTTIR (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+lapaixx posts big blind 20
+Dealt to SIGRIDOTTIR [Jh Tc]
+*** PRE-FLOP *** 
+LeGrizz13 folds
+SIGRIDOTTIR raises 260 to 280 and is all-in
+lapaixx folds
+SIGRIDOTTIR collected 300 from pot
+*** SUMMARY ***
+Total pot 300 | No rake
+Seat 3: SIGRIDOTTIR (small blind) won 300
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494430775345153-3-1764498603 - Holdem no limit (10/20) - 2025/11/30 10:30:03 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #3 is the button
+Seat 1: lapaixx (310)
+Seat 2: LeGrizz13 (290)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 10
+LeGrizz13 posts big blind 20
+Dealt to SIGRIDOTTIR [6d Th]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+lapaixx folds
+LeGrizz13 collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 2: LeGrizz13 (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494430775345153-4-1764498611 - Holdem no limit (10/20) - 2025/11/30 10:30:11 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #1 is the button
+Seat 1: lapaixx (300)
+Seat 2: LeGrizz13 (300)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+LeGrizz13 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [3c 7d]
+*** PRE-FLOP *** 
+lapaixx raises 20 to 40
+LeGrizz13 calls 30
+SIGRIDOTTIR folds
+*** FLOP *** [Kd 5s 2s]
+LeGrizz13 checks
+lapaixx bets 20
+LeGrizz13 calls 20
+*** TURN *** [Kd 5s 2s][Jd]
+LeGrizz13 checks
+lapaixx bets 49
+LeGrizz13 calls 49
+*** RIVER *** [Kd 5s 2s Jd][6c]
+LeGrizz13 bets 100
+lapaixx folds
+LeGrizz13 collected 338 from pot
+*** SUMMARY ***
+Total pot 338 | No rake
+Board: [Kd 5s 2s Jd 6c]
+Seat 2: LeGrizz13 (small blind) won 338
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494430775345153-5-1764498648 - Holdem no limit (15/30) - 2025/11/30 10:30:48 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #2 is the button
+Seat 1: lapaixx (191)
+Seat 2: LeGrizz13 (429)
+Seat 3: SIGRIDOTTIR (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+lapaixx posts big blind 30
+Dealt to SIGRIDOTTIR [2d 6s]
+*** PRE-FLOP *** 
+LeGrizz13 calls 30
+SIGRIDOTTIR folds
+lapaixx raises 161 to 191 and is all-in
+LeGrizz13 calls 161
+*** FLOP *** [Ks 9c Ac]
+*** TURN *** [Ks 9c Ac][5h]
+*** RIVER *** [Ks 9c Ac 5h][8d]
+*** SHOW DOWN ***
+LeGrizz13 shows [Jh Qs] (High card : Ace)
+lapaixx shows [7d 7s] (One pair : 7)
+lapaixx collected 397 from pot
+*** SUMMARY ***
+Total pot 397 | No rake
+Board: [Ks 9c Ac 5h 8d]
+Seat 1: lapaixx (big blind) showed [7d 7s] and won 397 with One pair : 7
+Seat 2: LeGrizz13 (button) showed [Jh Qs] and lost with High card : Ace
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402494430775345153-6-1764498665 - Holdem no limit (15/30) - 2025/11/30 10:31:05 UTC
+Table: 'Expresso Nitro(1025035612)#0' 3-max (real money) Seat #3 is the button
+Seat 1: lapaixx (397)
+Seat 2: LeGrizz13 (238)
+Seat 3: SIGRIDOTTIR (265)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 15
+LeGrizz13 posts big blind 30
+Dealt to SIGRIDOTTIR [6c 6d]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 235 to 265 and is all-in
+lapaixx raises 132 to 397 and is all-in
+LeGrizz13 folds
+*** FLOP *** [As 9h 9d]
+*** TURN *** [As 9h 9d][Js]
+*** RIVER *** [As 9h 9d Js][5s]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [6c 6d] (Two pairs : 9 and 6)
+lapaixx shows [Jc Kh] (Two pairs : Jacks and 9)
+lapaixx collected 692 from pot
+*** SUMMARY ***
+Total pot 692 | No rake
+Board: [As 9h 9d Js 5s]
+Seat 1: lapaixx (small blind) showed [Jc Kh] and won 692 with Two pairs : Jacks and 9
+Seat 3: SIGRIDOTTIR (button) showed [6c 6d] and lost with Two pairs : 9 and 6
+
+

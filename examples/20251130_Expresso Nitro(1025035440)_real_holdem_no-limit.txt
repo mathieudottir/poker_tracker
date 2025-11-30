@@ -1,0 +1,29 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402493692040970241-1-1764498552 - Holdem no limit (10/20) - 2025/11/30 10:29:12 UTC
+Table: 'Expresso Nitro(1025035440)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: goldwarner (300)
+Seat 3: LeGrizz13 (300)
+*** ANTE/BLINDS ***
+goldwarner posts small blind 10
+LeGrizz13 posts big blind 20
+Dealt to SIGRIDOTTIR [Th Ts]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 280 to 300 and is all-in
+goldwarner calls 290 and is all-in
+LeGrizz13 calls 280 and is all-in
+*** FLOP *** [Kc 4d 5c]
+*** TURN *** [Kc 4d 5c][7h]
+*** RIVER *** [Kc 4d 5c 7h][7c]
+*** SHOW DOWN ***
+goldwarner shows [Jd Ah] (One pair : 7)
+LeGrizz13 shows [6c 6h] (Two pairs : 7 and 6)
+SIGRIDOTTIR shows [Th Ts] (Two pairs : Tens and 7)
+SIGRIDOTTIR collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [Kc 4d 5c 7h 7c]
+Seat 1: SIGRIDOTTIR (button) showed [Th Ts] and won 900 with Two pairs : Tens and 7
+Seat 2: goldwarner (small blind) showed [Jd Ah] and lost with One pair : 7
+Seat 3: LeGrizz13 (big blind) showed [6c 6h] and lost with Two pairs : 7 and 6
+
+

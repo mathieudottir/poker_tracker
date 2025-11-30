@@ -1,0 +1,103 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494366350835713-1-1764498581 - Holdem no limit (10/20) - 2025/11/30 10:29:41 UTC
+Table: 'Expresso Nitro(1025035597)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: dav580 (300)
+Seat 3: WinAAnal (300)
+*** ANTE/BLINDS ***
+dav580 posts small blind 10
+WinAAnal posts big blind 20
+Dealt to SIGRIDOTTIR [Jh Ac]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 280 to 300 and is all-in
+dav580 folds
+WinAAnal folds
+SIGRIDOTTIR collected 330 from pot
+*** SUMMARY ***
+Total pot 330 | No rake
+Seat 1: SIGRIDOTTIR (button) won 330
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494366350835713-2-1764498589 - Holdem no limit (10/20) - 2025/11/30 10:29:49 UTC
+Table: 'Expresso Nitro(1025035597)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (330)
+Seat 2: dav580 (290)
+Seat 3: WinAAnal (280)
+*** ANTE/BLINDS ***
+WinAAnal posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [8h Ts]
+*** PRE-FLOP *** 
+dav580 calls 20
+WinAAnal folds
+SIGRIDOTTIR raises 310 to 330 and is all-in
+dav580 calls 270 and is all-in
+*** FLOP *** [6s Jh 6h]
+*** TURN *** [6s Jh 6h][9h]
+*** RIVER *** [6s Jh 6h 9h][4d]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [8h Ts] (One pair : 6)
+dav580 shows [Th Ad] (One pair : 6)
+dav580 collected 590 from main pot
+SIGRIDOTTIR collected 40 from side pot 1
+*** SUMMARY ***
+Total pot 630 | No rake
+Board: [6s Jh 6h 9h 4d]
+Seat 1: SIGRIDOTTIR (big blind) showed [8h Ts] and won 40 with One pair : 6
+Seat 2: dav580 (button) showed [Th Ad] and won 590 with One pair : 6
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494366350835713-3-1764498606 - Holdem no limit (10/20) - 2025/11/30 10:30:06 UTC
+Table: 'Expresso Nitro(1025035597)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (40)
+Seat 2: dav580 (590)
+Seat 3: WinAAnal (270)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+dav580 posts big blind 20
+Dealt to SIGRIDOTTIR [9s Th]
+*** PRE-FLOP *** 
+WinAAnal folds
+SIGRIDOTTIR raises 20 to 40 and is all-in
+dav580 calls 20
+*** FLOP *** [Tc 7c 8h]
+*** TURN *** [Tc 7c 8h][Ad]
+*** RIVER *** [Tc 7c 8h Ad][6c]
+*** SHOW DOWN ***
+dav580 shows [6h Qc] (One pair : 6)
+SIGRIDOTTIR shows [9s Th] (Straight Ten high)
+SIGRIDOTTIR collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | No rake
+Board: [Tc 7c 8h Ad 6c]
+Seat 1: SIGRIDOTTIR (small blind) showed [9s Th] and won 80 with Straight Ten high
+Seat 2: dav580 (big blind) showed [6h Qc] and lost with One pair : 6
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402494366350835713-4-1764498623 - Holdem no limit (10/20) - 2025/11/30 10:30:23 UTC
+Table: 'Expresso Nitro(1025035597)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (80)
+Seat 2: dav580 (550)
+Seat 3: WinAAnal (270)
+*** ANTE/BLINDS ***
+dav580 posts small blind 10
+WinAAnal posts big blind 20
+Dealt to SIGRIDOTTIR [As 3s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 60 to 80 and is all-in
+dav580 calls 70
+WinAAnal raises 190 to 270 and is all-in
+dav580 folds
+*** FLOP *** [Kc 5c 8d]
+*** TURN *** [Kc 5c 8d][7d]
+*** RIVER *** [Kc 5c 8d 7d][Kh]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [As 3s] (One pair : Kings)
+WinAAnal shows [7s Ad] (Two pairs : Kings and 7)
+WinAAnal collected 430 from pot
+*** SUMMARY ***
+Total pot 430 | No rake
+Board: [Kc 5c 8d 7d Kh]
+Seat 1: SIGRIDOTTIR (button) showed [As 3s] and lost with One pair : Kings
+Seat 3: WinAAnal (big blind) showed [7s Ad] and won 430 with Two pairs : Kings and 7
+
+

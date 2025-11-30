@@ -1,0 +1,28 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495203869458433-1-1764498616 - Holdem no limit (10/20) - 2025/11/30 10:30:16 UTC
+Table: 'Expresso Nitro(1025035792)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: mehr9550 (300)
+Seat 3: klucifer (300)
+*** ANTE/BLINDS ***
+klucifer posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [4c 9h]
+*** PRE-FLOP *** 
+mehr9550 folds
+klucifer calls 10
+SIGRIDOTTIR raises 280 to 300 and is all-in
+klucifer calls 280 and is all-in
+*** FLOP *** [7h 8c 3d]
+*** TURN *** [7h 8c 3d][Qh]
+*** RIVER *** [7h 8c 3d Qh][3h]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [4c 9h] (One pair : 3)
+klucifer shows [Kh 6h] (Flush King high)
+klucifer collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | No rake
+Board: [7h 8c 3d Qh 3h]
+Seat 1: SIGRIDOTTIR (big blind) showed [4c 9h] and lost with One pair : 3
+Seat 3: klucifer (small blind) showed [Kh 6h] and won 600 with Flush King high
+
+

@@ -1,0 +1,27 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492261816860673-1-1764498485 - Holdem no limit (10/20) - 2025/11/30 10:28:05 UTC
+Table: 'Expresso Nitro(1025035107)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: Besuu (300)
+Seat 3: julienbaik13 (300)
+*** ANTE/BLINDS ***
+julienbaik13 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Kc Qh]
+*** PRE-FLOP *** 
+Besuu folds
+julienbaik13 raises 280 to 300 and is all-in
+SIGRIDOTTIR calls 280 and is all-in
+*** FLOP *** [5h Ad Ah]
+*** TURN *** [5h Ad Ah][Th]
+*** RIVER *** [5h Ad Ah Th][8c]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [Kc Qh] (One pair : Aces)
+julienbaik13 shows [4c As] (Trips of Aces)
+julienbaik13 collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | No rake
+Board: [5h Ad Ah Th 8c]
+Seat 1: SIGRIDOTTIR (big blind) showed [Kc Qh] and lost with One pair : Aces
+Seat 3: julienbaik13 (small blind) showed [4c As] and won 600 with Trips of Aces
+
+

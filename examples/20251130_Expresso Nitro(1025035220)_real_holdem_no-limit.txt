@@ -1,0 +1,461 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492747148165121-1-1764498506 - Holdem no limit (10/20) - 2025/11/30 10:28:26 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: SpleeneelqS (300)
+Seat 3: blackslim269 (300)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+SpleeneelqS posts big blind 20
+Dealt to SIGRIDOTTIR [4h 3s]
+*** PRE-FLOP *** 
+blackslim269 folds
+SIGRIDOTTIR raises 280 to 300 and is all-in
+SpleeneelqS folds
+SIGRIDOTTIR collected 320 from pot
+*** SUMMARY ***
+Total pot 320 | No rake
+Seat 1: SIGRIDOTTIR (small blind) won 320
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492747148165121-2-1764498518 - Holdem no limit (10/20) - 2025/11/30 10:28:38 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (320)
+Seat 2: SpleeneelqS (280)
+Seat 3: blackslim269 (300)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 10
+blackslim269 posts big blind 20
+Dealt to SIGRIDOTTIR [2c Qd]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+SpleeneelqS calls 10
+blackslim269 checks
+*** FLOP *** [6h 9s Ts]
+SpleeneelqS bets 20
+blackslim269 calls 20
+*** TURN *** [6h 9s Ts][4c]
+SpleeneelqS bets 52
+blackslim269 calls 52
+*** RIVER *** [6h 9s Ts 4c][Ah]
+SpleeneelqS checks
+blackslim269 checks
+*** SHOW DOWN ***
+blackslim269 shows [3s 8s] (High card : Ace)
+SpleeneelqS shows [4d Js] (One pair : 4)
+SpleeneelqS collected 184 from pot
+*** SUMMARY ***
+Total pot 184 | No rake
+Board: [6h 9s Ts 4c Ah]
+Seat 2: SpleeneelqS (small blind) showed [4d Js] and won 184 with One pair : 4
+Seat 3: blackslim269 (big blind) showed [3s 8s] and lost with High card : Ace
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492747148165121-3-1764498554 - Holdem no limit (10/20) - 2025/11/30 10:29:14 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (320)
+Seat 2: SpleeneelqS (372)
+Seat 3: blackslim269 (208)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [4c 3d]
+*** PRE-FLOP *** 
+SpleeneelqS folds
+blackslim269 raises 188 to 208 and is all-in
+SIGRIDOTTIR folds
+blackslim269 collected 228 from pot
+*** SUMMARY ***
+Total pot 228 | No rake
+Seat 3: blackslim269 (small blind) won 228
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492747148165121-4-1764498561 - Holdem no limit (10/20) - 2025/11/30 10:29:21 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (300)
+Seat 2: SpleeneelqS (372)
+Seat 3: blackslim269 (228)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+SpleeneelqS posts big blind 20
+Dealt to SIGRIDOTTIR [2s 2d]
+*** PRE-FLOP *** 
+blackslim269 raises 208 to 228 and is all-in
+SIGRIDOTTIR raises 72 to 300 and is all-in
+SpleeneelqS folds
+*** FLOP *** [Ts 6s 5h]
+*** TURN *** [Ts 6s 5h][7d]
+*** RIVER *** [Ts 6s 5h 7d][8d]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [2s 2d] (One pair : 2)
+blackslim269 shows [Th Ad] (One pair : Tens)
+blackslim269 collected 476 from main pot
+SIGRIDOTTIR collected 72 from side pot 1
+*** SUMMARY ***
+Total pot 548 | No rake
+Board: [Ts 6s 5h 7d 8d]
+Seat 1: SIGRIDOTTIR (small blind) showed [2s 2d] and won 72 with One pair : 2
+Seat 3: blackslim269 (button) showed [Th Ad] and won 476 with One pair : Tens
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492747148165121-5-1764498574 - Holdem no limit (15/30) - 2025/11/30 10:29:34 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (72)
+Seat 2: SpleeneelqS (352)
+Seat 3: blackslim269 (476)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 15
+blackslim269 posts big blind 30
+Dealt to SIGRIDOTTIR [4s 2d]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+SpleeneelqS folds
+blackslim269 collected 45 from pot
+*** SUMMARY ***
+Total pot 45 | No rake
+Seat 3: blackslim269 (big blind) won 45
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492747148165121-6-1764498579 - Holdem no limit (15/30) - 2025/11/30 10:29:39 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (72)
+Seat 2: SpleeneelqS (337)
+Seat 3: blackslim269 (491)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [Qd Ks]
+*** PRE-FLOP *** 
+SpleeneelqS folds
+blackslim269 calls 15
+SIGRIDOTTIR raises 42 to 72 and is all-in
+blackslim269 calls 42
+*** FLOP *** [Kh Ac Jc]
+*** TURN *** [Kh Ac Jc][5c]
+*** RIVER *** [Kh Ac Jc 5c][4h]
+*** SHOW DOWN ***
+blackslim269 shows [8d Js] (One pair : Jacks)
+SIGRIDOTTIR shows [Qd Ks] (One pair : Kings)
+SIGRIDOTTIR collected 144 from pot
+*** SUMMARY ***
+Total pot 144 | No rake
+Board: [Kh Ac Jc 5c 4h]
+Seat 1: SIGRIDOTTIR (big blind) showed [Qd Ks] and won 144 with One pair : Kings
+Seat 3: blackslim269 (small blind) showed [8d Js] and lost with One pair : Jacks
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492747148165121-7-1764498594 - Holdem no limit (15/30) - 2025/11/30 10:29:54 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (144)
+Seat 2: SpleeneelqS (337)
+Seat 3: blackslim269 (419)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+SpleeneelqS posts big blind 30
+Dealt to SIGRIDOTTIR [9c 7s]
+*** PRE-FLOP *** 
+blackslim269 calls 30
+SIGRIDOTTIR folds
+SpleeneelqS checks
+*** FLOP *** [5c Ah 6c]
+SpleeneelqS checks
+blackslim269 checks
+*** TURN *** [5c Ah 6c][Kc]
+SpleeneelqS checks
+blackslim269 bets 75
+SpleeneelqS folds
+blackslim269 collected 150 from pot
+*** SUMMARY ***
+Total pot 150 | No rake
+Board: [5c Ah 6c Kc]
+Seat 3: blackslim269 (button) won 150
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492747148165121-8-1764498609 - Holdem no limit (15/30) - 2025/11/30 10:30:09 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (129)
+Seat 2: SpleeneelqS (307)
+Seat 3: blackslim269 (464)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 15
+blackslim269 posts big blind 30
+Dealt to SIGRIDOTTIR [Tc 8h]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 99 to 129 and is all-in
+SpleeneelqS folds
+blackslim269 folds
+SIGRIDOTTIR collected 174 from pot
+*** SUMMARY ***
+Total pot 174 | No rake
+Seat 1: SIGRIDOTTIR (button) won 174
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402492747148165121-9-1764498618 - Holdem no limit (15/30) - 2025/11/30 10:30:18 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (174)
+Seat 2: SpleeneelqS (292)
+Seat 3: blackslim269 (434)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [6c Js]
+*** PRE-FLOP *** 
+SpleeneelqS raises 30 to 60
+blackslim269 calls 45
+SIGRIDOTTIR folds
+*** FLOP *** [Qh Jd 8c]
+blackslim269 checks
+SpleeneelqS checks
+*** TURN *** [Qh Jd 8c][Ac]
+blackslim269 bets 374 and is all-in
+SpleeneelqS calls 232 and is all-in
+*** RIVER *** [Qh Jd 8c Ac][9h]
+*** SHOW DOWN ***
+SpleeneelqS shows [Kh Th] (Straight Ace high)
+blackslim269 shows [Ad 3d] (One pair : Aces)
+blackslim269 collected 142 from side pot 1
+SpleeneelqS collected 614 from main pot
+*** SUMMARY ***
+Total pot 756 | No rake
+Board: [Qh Jd 8c Ac 9h]
+Seat 2: SpleeneelqS (button) showed [Kh Th] and won 614 with Straight Ace high
+Seat 3: blackslim269 (small blind) showed [Ad 3d] and won 142 with One pair : Aces
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402492747148165121-10-1764498636 - Holdem no limit (20/40) - 2025/11/30 10:30:36 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (144)
+Seat 2: SpleeneelqS (614)
+Seat 3: blackslim269 (142)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+SpleeneelqS posts big blind 40
+Dealt to SIGRIDOTTIR [Qd 2s]
+*** PRE-FLOP *** 
+blackslim269 raises 102 to 142 and is all-in
+SIGRIDOTTIR folds
+SpleeneelqS calls 102
+*** FLOP *** [5s 8c Ac]
+*** TURN *** [5s 8c Ac][2d]
+*** RIVER *** [5s 8c Ac 2d][8d]
+*** SHOW DOWN ***
+SpleeneelqS shows [Kh Qs] (One pair : 8)
+blackslim269 shows [7s 7c] (Two pairs : 8 and 7)
+blackslim269 collected 304 from pot
+*** SUMMARY ***
+Total pot 304 | No rake
+Board: [5s 8c Ac 2d 8d]
+Seat 2: SpleeneelqS (big blind) showed [Kh Qs] and lost with One pair : 8
+Seat 3: blackslim269 (button) showed [7s 7c] and won 304 with Two pairs : 8 and 7
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402492747148165121-11-1764498649 - Holdem no limit (20/40) - 2025/11/30 10:30:49 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (124)
+Seat 2: SpleeneelqS (472)
+Seat 3: blackslim269 (304)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 20
+blackslim269 posts big blind 40
+Dealt to SIGRIDOTTIR [6c 6h]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 84 to 124 and is all-in
+SpleeneelqS calls 104
+blackslim269 folds
+*** FLOP *** [5h Ah Kh]
+*** TURN *** [5h Ah Kh][5c]
+*** RIVER *** [5h Ah Kh 5c][Th]
+*** SHOW DOWN ***
+SpleeneelqS shows [Kd Tc] (Two pairs : Kings and Tens)
+SIGRIDOTTIR shows [6c 6h] (Flush Ace high)
+SIGRIDOTTIR collected 288 from pot
+*** SUMMARY ***
+Total pot 288 | No rake
+Board: [5h Ah Kh 5c Th]
+Seat 1: SIGRIDOTTIR (button) showed [6c 6h] and won 288 with Flush Ace high
+Seat 2: SpleeneelqS (small blind) showed [Kd Tc] and lost with Two pairs : Kings and Tens
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402492747148165121-12-1764498664 - Holdem no limit (20/40) - 2025/11/30 10:31:04 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (288)
+Seat 2: SpleeneelqS (348)
+Seat 3: blackslim269 (264)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 20
+SIGRIDOTTIR posts big blind 40
+Dealt to SIGRIDOTTIR [3s 2h]
+*** PRE-FLOP *** 
+SpleeneelqS folds
+blackslim269 calls 20
+SIGRIDOTTIR checks
+*** FLOP *** [5s 9c Qc]
+blackslim269 bets 40
+SIGRIDOTTIR folds
+blackslim269 collected 120 from pot
+*** SUMMARY ***
+Total pot 120 | No rake
+Board: [5s 9c Qc]
+Seat 3: blackslim269 (small blind) won 120
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 3 - HandId: #4402492747148165121-13-1764498677 - Holdem no limit (20/40) - 2025/11/30 10:31:17 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (248)
+Seat 2: SpleeneelqS (348)
+Seat 3: blackslim269 (304)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 20
+SpleeneelqS posts big blind 40
+Dealt to SIGRIDOTTIR [8s 7d]
+*** PRE-FLOP *** 
+blackslim269 calls 40
+SIGRIDOTTIR raises 208 to 248 and is all-in
+SpleeneelqS folds
+blackslim269 calls 208
+*** FLOP *** [Kc 5c 4h]
+*** TURN *** [Kc 5c 4h][6c]
+*** RIVER *** [Kc 5c 4h 6c][Ad]
+*** SHOW DOWN ***
+blackslim269 shows [Ah Th] (One pair : Aces)
+SIGRIDOTTIR shows [8s 7d] (Straight 8 high)
+SIGRIDOTTIR collected 536 from pot
+*** SUMMARY ***
+Total pot 536 | No rake
+Board: [Kc 5c 4h 6c Ad]
+Seat 1: SIGRIDOTTIR (small blind) showed [8s 7d] and won 536 with Straight 8 high
+Seat 3: blackslim269 (button) showed [Ah Th] and lost with One pair : Aces
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402492747148165121-14-1764498691 - Holdem no limit (30/60) - 2025/11/30 10:31:31 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (536)
+Seat 2: SpleeneelqS (308)
+Seat 3: blackslim269 (56)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 30
+blackslim269 posts big blind 56 and is all-in
+Dealt to SIGRIDOTTIR [7d Th]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+SpleeneelqS calls 30
+*** FLOP *** [Ah 2s As]
+*** TURN *** [Ah 2s As][Ac]
+*** RIVER *** [Ah 2s As Ac][2h]
+*** SHOW DOWN ***
+SpleeneelqS shows [Js 9c] (Full of Aces and 2)
+blackslim269 shows [8h Jd] (Full of Aces and 2)
+blackslim269 collected 56 from main pot
+SpleeneelqS collected 60 from side pot 1
+*** SUMMARY ***
+Total pot 116 | No rake
+Board: [Ah 2s As Ac 2h]
+Seat 2: SpleeneelqS (small blind) showed [Js 9c] and won 60 with Full of Aces and 2
+Seat 3: blackslim269 (big blind) showed [8h Jd] and won 56 with Full of Aces and 2
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402492747148165121-15-1764498704 - Holdem no limit (30/60) - 2025/11/30 10:31:44 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #2 is the button
+Seat 1: SIGRIDOTTIR (536)
+Seat 2: SpleeneelqS (308)
+Seat 3: blackslim269 (56)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 30
+SIGRIDOTTIR posts big blind 60
+Dealt to SIGRIDOTTIR [7h 9s]
+*** PRE-FLOP *** 
+SpleeneelqS folds
+blackslim269 calls 26 and is all-in
+*** FLOP *** [Js Qs 8d]
+*** TURN *** [Js Qs 8d][Kd]
+*** RIVER *** [Js Qs 8d Kd][5c]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [7h 9s] (High card : King)
+blackslim269 shows [3h 8s] (One pair : 8)
+blackslim269 collected 112 from main pot
+SIGRIDOTTIR collected 4 from side pot 1
+*** SUMMARY ***
+Total pot 116 | No rake
+Board: [Js Qs 8d Kd 5c]
+Seat 1: SIGRIDOTTIR (big blind) showed [7h 9s] and won 4 with High card : King
+Seat 3: blackslim269 (small blind) showed [3h 8s] and won 112 with One pair : 8
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402492747148165121-16-1764498717 - Holdem no limit (30/60) - 2025/11/30 10:31:57 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (480)
+Seat 2: SpleeneelqS (308)
+Seat 3: blackslim269 (112)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 30
+SpleeneelqS posts big blind 60
+Dealt to SIGRIDOTTIR [Jd 8h]
+*** PRE-FLOP *** 
+blackslim269 raises 52 to 112 and is all-in
+SIGRIDOTTIR folds
+SpleeneelqS calls 52
+*** FLOP *** [Th 7s 2h]
+*** TURN *** [Th 7s 2h][6h]
+*** RIVER *** [Th 7s 2h 6h][2s]
+*** SHOW DOWN ***
+SpleeneelqS shows [Qs 9s] (One pair : 2)
+blackslim269 shows [Kd 3d] (One pair : 2)
+blackslim269 collected 254 from pot
+*** SUMMARY ***
+Total pot 254 | No rake
+Board: [Th 7s 2h 6h 2s]
+Seat 2: SpleeneelqS (big blind) showed [Qs 9s] and lost with One pair : 2
+Seat 3: blackslim269 (button) showed [Kd 3d] and won 254 with One pair : 2
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 4 - HandId: #4402492747148165121-17-1764498729 - Holdem no limit (30/60) - 2025/11/30 10:32:09 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #1 is the button
+Seat 1: SIGRIDOTTIR (450)
+Seat 2: SpleeneelqS (196)
+Seat 3: blackslim269 (254)
+*** ANTE/BLINDS ***
+SpleeneelqS posts small blind 30
+blackslim269 posts big blind 60
+Dealt to SIGRIDOTTIR [2c Jh]
+*** PRE-FLOP *** 
+SIGRIDOTTIR folds
+SpleeneelqS raises 136 to 196 and is all-in
+blackslim269 calls 136
+*** FLOP *** [Js Qd 8s]
+*** TURN *** [Js Qd 8s][5c]
+*** RIVER *** [Js Qd 8s 5c][Th]
+*** SHOW DOWN ***
+SpleeneelqS shows [3s 6s] (High card : Queen)
+blackslim269 shows [7c Ac] (High card : Ace)
+blackslim269 collected 392 from pot
+*** SUMMARY ***
+Total pot 392 | No rake
+Board: [Js Qd 8s 5c Th]
+Seat 2: SpleeneelqS (small blind) showed [3s 6s] and lost with High card : Queen
+Seat 3: blackslim269 (big blind) showed [7c Ac] and won 392 with High card : Ace
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 5 - HandId: #4402492747148165121-18-1764498744 - Holdem no limit (40/80) - 2025/11/30 10:32:24 UTC
+Table: 'Expresso Nitro(1025035220)#0' 3-max (real money) Seat #3 is the button
+Seat 1: SIGRIDOTTIR (450)
+Seat 3: blackslim269 (450)
+*** ANTE/BLINDS ***
+blackslim269 posts small blind 40
+SIGRIDOTTIR posts big blind 80
+Dealt to SIGRIDOTTIR [5c Td]
+*** PRE-FLOP *** 
+blackslim269 raises 370 to 450 and is all-in
+SIGRIDOTTIR calls 370 and is all-in
+*** FLOP *** [4s 4c 8s]
+*** TURN *** [4s 4c 8s][Jd]
+*** RIVER *** [4s 4c 8s Jd][Ac]
+*** SHOW DOWN ***
+SIGRIDOTTIR shows [5c Td] (One pair : 4)
+blackslim269 shows [Qc Jh] (Two pairs : Jacks and 4)
+blackslim269 collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [4s 4c 8s Jd Ac]
+Seat 1: SIGRIDOTTIR (big blind) showed [5c Td] and lost with One pair : 4
+Seat 3: blackslim269 (small blind) (button) showed [Qc Jh] and won 900 with Two pairs : Jacks and 4
+
+

@@ -1,0 +1,71 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492094313136129-1-1764498475 - Holdem no limit (10/20) - 2025/11/30 10:27:55 UTC
+Table: 'Expresso Nitro(1025035068)#0' 3-max (real money) Seat #3 is the button
+Seat 1: lapaixx (300)
+Seat 2: SIGRIDOTTIR (300)
+Seat 3: Polska10 (300)
+*** ANTE/BLINDS ***
+lapaixx posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [Ad 8d]
+*** PRE-FLOP *** 
+Polska10 calls 20
+lapaixx raises 280 to 300 and is all-in
+SIGRIDOTTIR calls 280 and is all-in
+Polska10 folds
+*** FLOP *** [Jd Qc Td]
+*** TURN *** [Jd Qc Td][3c]
+*** RIVER *** [Jd Qc Td 3c][Kd]
+*** SHOW DOWN ***
+lapaixx shows [5c Ac] (Straight Ace high)
+SIGRIDOTTIR shows [Ad 8d] (Flush Ace high)
+SIGRIDOTTIR collected 620 from pot
+*** SUMMARY ***
+Total pot 620 | No rake
+Board: [Jd Qc Td 3c Kd]
+Seat 1: lapaixx (small blind) showed [5c Ac] and lost with Straight Ace high
+Seat 2: SIGRIDOTTIR (big blind) showed [Ad 8d] and won 620 with Flush Ace high
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492094313136129-2-1764498494 - Holdem no limit (10/20) - 2025/11/30 10:28:14 UTC
+Table: 'Expresso Nitro(1025035068)#0' 3-max (real money) Seat #2 is the button
+Seat 2: SIGRIDOTTIR (620)
+Seat 3: Polska10 (280)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+Polska10 posts big blind 20
+Dealt to SIGRIDOTTIR [Ac Jd]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 600 to 620 and is all-in
+Polska10 folds
+SIGRIDOTTIR collected 640 from pot
+*** SUMMARY ***
+Total pot 640 | No rake
+Seat 2: SIGRIDOTTIR (small blind) (button) won 640
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402492094313136129-3-1764498502 - Holdem no limit (10/20) - 2025/11/30 10:28:22 UTC
+Table: 'Expresso Nitro(1025035068)#0' 3-max (real money) Seat #3 is the button
+Seat 2: SIGRIDOTTIR (640)
+Seat 3: Polska10 (260)
+*** ANTE/BLINDS ***
+Polska10 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [5s 3h]
+*** PRE-FLOP *** 
+Polska10 calls 10
+SIGRIDOTTIR raises 620 to 640 and is all-in
+Polska10 calls 240 and is all-in
+*** FLOP *** [Jc 8s 2d]
+*** TURN *** [Jc 8s 2d][Ac]
+*** RIVER *** [Jc 8s 2d Ac][4d]
+*** SHOW DOWN ***
+Polska10 shows [Jd 9h] (One pair : Jacks)
+SIGRIDOTTIR shows [5s 3h] (Straight 5 high)
+SIGRIDOTTIR collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [Jc 8s 2d Ac 4d]
+Seat 2: SIGRIDOTTIR (big blind) showed [5s 3h] and won 900 with Straight 5 high
+Seat 3: Polska10 (small blind) (button) showed [Jd 9h] and lost with One pair : Jacks
+
+

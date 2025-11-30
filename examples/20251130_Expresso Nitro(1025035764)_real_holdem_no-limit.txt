@@ -1,0 +1,161 @@
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495083610374145-1-1764498614 - Holdem no limit (10/20) - 2025/11/30 10:30:14 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #3 is the button
+Seat 1: naif23314940 (300)
+Seat 2: charly005 (300)
+Seat 3: SIGRIDOTTIR (300)
+*** ANTE/BLINDS ***
+naif23314940 posts small blind 10
+charly005 posts big blind 20
+Dealt to SIGRIDOTTIR [7h 7s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 280 to 300 and is all-in
+naif23314940 folds
+charly005 calls 280 and is all-in
+*** FLOP *** [9d 7d Qc]
+*** TURN *** [9d 7d Qc][6h]
+*** RIVER *** [9d 7d Qc 6h][Tc]
+*** SHOW DOWN ***
+charly005 shows [Qs 4s] (One pair : Queens)
+SIGRIDOTTIR shows [7h 7s] (Trips of 7)
+SIGRIDOTTIR collected 610 from pot
+*** SUMMARY ***
+Total pot 610 | No rake
+Board: [9d 7d Qc 6h Tc]
+Seat 2: charly005 (big blind) showed [Qs 4s] and lost with One pair : Queens
+Seat 3: SIGRIDOTTIR (button) showed [7h 7s] and won 610 with Trips of 7
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495083610374145-2-1764498628 - Holdem no limit (10/20) - 2025/11/30 10:30:28 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #3 is the button
+Seat 1: naif23314940 (290)
+Seat 3: SIGRIDOTTIR (610)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+naif23314940 posts big blind 20
+Dealt to SIGRIDOTTIR [3h 2s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR calls 10
+naif23314940 checks
+*** FLOP *** [6c Qd Qh]
+naif23314940 checks
+SIGRIDOTTIR checks
+*** TURN *** [6c Qd Qh][2c]
+naif23314940 bets 20
+SIGRIDOTTIR calls 20
+*** RIVER *** [6c Qd Qh 2c][Ad]
+naif23314940 checks
+SIGRIDOTTIR checks
+*** SHOW DOWN ***
+naif23314940 shows [7c Js] (One pair : Queens)
+SIGRIDOTTIR shows [3h 2s] (Two pairs : Queens and 2)
+SIGRIDOTTIR collected 80 from pot
+*** SUMMARY ***
+Total pot 80 | No rake
+Board: [6c Qd Qh 2c Ad]
+Seat 1: naif23314940 (big blind) showed [7c Js] and lost with One pair : Queens
+Seat 3: SIGRIDOTTIR (small blind) (button) showed [3h 2s] and won 80 with Two pairs : Queens and 2
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495083610374145-3-1764498651 - Holdem no limit (10/20) - 2025/11/30 10:30:51 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #1 is the button
+Seat 1: naif23314940 (250)
+Seat 3: SIGRIDOTTIR (650)
+*** ANTE/BLINDS ***
+naif23314940 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [7d Kc]
+*** PRE-FLOP *** 
+naif23314940 folds
+SIGRIDOTTIR collected 30 from pot
+*** SUMMARY ***
+Total pot 30 | No rake
+Seat 3: SIGRIDOTTIR (big blind) won 30
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495083610374145-4-1764498656 - Holdem no limit (10/20) - 2025/11/30 10:30:56 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #3 is the button
+Seat 1: naif23314940 (240)
+Seat 3: SIGRIDOTTIR (660)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 10
+naif23314940 posts big blind 20
+Dealt to SIGRIDOTTIR [5s 8s]
+*** PRE-FLOP *** 
+SIGRIDOTTIR calls 10
+naif23314940 checks
+*** FLOP *** [6c 4d 9d]
+naif23314940 bets 220 and is all-in
+SIGRIDOTTIR folds
+naif23314940 collected 260 from pot
+*** SUMMARY ***
+Total pot 260 | No rake
+Board: [6c 4d 9d]
+Seat 1: naif23314940 (big blind) won 260
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 1 - HandId: #4402495083610374145-5-1764498666 - Holdem no limit (10/20) - 2025/11/30 10:31:06 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #1 is the button
+Seat 1: naif23314940 (260)
+Seat 3: SIGRIDOTTIR (640)
+*** ANTE/BLINDS ***
+naif23314940 posts small blind 10
+SIGRIDOTTIR posts big blind 20
+Dealt to SIGRIDOTTIR [5c Js]
+*** PRE-FLOP *** 
+naif23314940 calls 10
+SIGRIDOTTIR checks
+*** FLOP *** [Td Jd Ah]
+SIGRIDOTTIR checks
+naif23314940 checks
+*** TURN *** [Td Jd Ah][6s]
+SIGRIDOTTIR bets 20
+naif23314940 folds
+SIGRIDOTTIR collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | No rake
+Board: [Td Jd Ah 6s]
+Seat 3: SIGRIDOTTIR (big blind) won 60
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402495083610374145-6-1764498683 - Holdem no limit (15/30) - 2025/11/30 10:31:23 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #3 is the button
+Seat 1: naif23314940 (240)
+Seat 3: SIGRIDOTTIR (660)
+*** ANTE/BLINDS ***
+SIGRIDOTTIR posts small blind 15
+naif23314940 posts big blind 30
+Dealt to SIGRIDOTTIR [Ad 2c]
+*** PRE-FLOP *** 
+SIGRIDOTTIR raises 630 to 660 and is all-in
+naif23314940 folds
+SIGRIDOTTIR collected 690 from pot
+*** SUMMARY ***
+Total pot 690 | No rake
+Seat 3: SIGRIDOTTIR (small blind) (button) won 690
+
+
+Winamax Poker - Tournament "Expresso Nitro" buyIn: 0.93€ + 0.07€ level: 2 - HandId: #4402495083610374145-7-1764498688 - Holdem no limit (15/30) - 2025/11/30 10:31:28 UTC
+Table: 'Expresso Nitro(1025035764)#0' 3-max (real money) Seat #1 is the button
+Seat 1: naif23314940 (210)
+Seat 3: SIGRIDOTTIR (690)
+*** ANTE/BLINDS ***
+naif23314940 posts small blind 15
+SIGRIDOTTIR posts big blind 30
+Dealt to SIGRIDOTTIR [5h 5c]
+*** PRE-FLOP *** 
+naif23314940 raises 180 to 210 and is all-in
+SIGRIDOTTIR raises 480 to 690 and is all-in
+*** FLOP *** [Js Jc 6h]
+*** TURN *** [Js Jc 6h][3h]
+*** RIVER *** [Js Jc 6h 3h][3s]
+*** SHOW DOWN ***
+naif23314940 shows [Td 7d] (Two pairs : Jacks and 3)
+SIGRIDOTTIR shows [5h 5c] (Two pairs : Jacks and 5)
+SIGRIDOTTIR collected 900 from pot
+*** SUMMARY ***
+Total pot 900 | No rake
+Board: [Js Jc 6h 3h 3s]
+Seat 1: naif23314940 (small blind) (button) showed [Td 7d] and lost with Two pairs : Jacks and 3
+Seat 3: SIGRIDOTTIR (big blind) showed [5h 5c] and won 900 with Two pairs : Jacks and 5
+
+
