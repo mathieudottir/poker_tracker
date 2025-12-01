@@ -131,8 +131,51 @@ def import_page():
 
     st.divider()
 
+    # File upload import
+    st.subheader("📤 Upload Hand Histories")
+    st.write("Upload your Winamax .txt hand history files directly from your computer")
+
+    uploaded_files = st.file_uploader(
+        "Choose hand history files",
+        type=['txt'],
+        accept_multiple_files=True,
+        help="Select one or more .txt files from your Winamax hand history folder"
+    )
+
+    if uploaded_files:
+        if st.button("Import Uploaded Files", type="primary"):
+            with st.spinner(f"Importing {len(uploaded_files)} file(s)..."):
+                import tempfile
+                import os
+
+                # Create temp directory
+                temp_dir = tempfile.mkdtemp()
+
+                try:
+                    # Save uploaded files to temp directory
+                    for uploaded_file in uploaded_files:
+                        file_path = os.path.join(temp_dir, uploaded_file.name)
+                        with open(file_path, 'wb') as f:
+                            f.write(uploaded_file.getbuffer())
+
+                    # Import from temp directory
+                    result = api_call("/import/directory", "POST", {
+                        "user_id": user_id,
+                        "directory": temp_dir
+                    })
+
+                    if result:
+                        st.success(f"✅ Imported {result.get('count', 0)} tournaments from {len(uploaded_files)} file(s)")
+                        st.rerun()
+                finally:
+                    # Cleanup temp directory
+                    import shutil
+                    shutil.rmtree(temp_dir, ignore_errors=True)
+
+    st.divider()
+
     # Manual import
-    st.subheader("Manual Import")
+    st.subheader("📁 Import from Server Directory")
 
     import_dir = st.text_input("Directory Path", value="./examples")
 
