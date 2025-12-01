@@ -45,23 +45,8 @@ export default function Import({ user, setUser }: PageProps) {
       setResult(null)
       setProgress(0)
 
-      // Create temp directory and upload files
-      const formData = new FormData()
-      files.forEach((file) => {
-        formData.append('files', file)
-      })
-      formData.append('user_id', user.id.toString())
-
-      const response = await fetch('http://localhost:8080/api/import/files', {
-        method: 'POST',
-        body: formData,
-      })
-
-      if (!response.ok) {
-        throw new Error(`Upload failed: ${response.statusText}`)
-      }
-
-      const data = await response.json()
+      // Upload files using API
+      const data = await api.importFiles(user.id, files)
       setResult(data)
       setProgress(100)
       setFiles([])

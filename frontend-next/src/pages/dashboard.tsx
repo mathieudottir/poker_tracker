@@ -44,15 +44,18 @@ export default function Dashboard({ user, setUser }: PageProps) {
     try {
       setLoading(true)
       const data = await api.getTournaments(user.id)
-      setTournaments(data)
+      // Handle null or undefined response
+      const tournamentsData = data || []
+      setTournaments(tournamentsData)
 
-      if (data.length > 0) {
-        const dates = data.map((t) => new Date(t.start_time))
+      if (tournamentsData.length > 0) {
+        const dates = tournamentsData.map((t) => new Date(t.start_time))
         setStartDate(format(new Date(Math.min(...dates.map((d) => d.getTime()))), 'yyyy-MM-dd'))
         setEndDate(format(new Date(Math.max(...dates.map((d) => d.getTime()))), 'yyyy-MM-dd'))
       }
     } catch (err) {
       console.error('Error loading tournaments:', err)
+      setTournaments([]) // Set to empty array on error
     } finally {
       setLoading(false)
     }
