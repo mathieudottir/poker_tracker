@@ -8,10 +8,6 @@ interface PageProps {
   setUser: (user: any) => void
 }
 
-export async function getServerSideProps() {
-  return { props: {} }
-}
-
 const WINA_STATUSES = [
   { name: 'Aluminium', rakeback: 0 },
   { name: 'Bronze', rakeback: 20 },
