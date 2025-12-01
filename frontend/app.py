@@ -146,8 +146,203 @@ def import_page():
 
     st.divider()
 
+    # Auto-watcher for PC
+    st.subheader("🤖 Surveillance Automatique depuis votre PC")
+
+    with st.expander("📖 **Import automatique pendant que vous jouez** (RECOMMANDÉ)", expanded=False):
+        st.markdown("""
+        ### 🎯 Qu'est-ce que c'est ?
+
+        Un petit programme qui **tourne sur votre PC** et:
+        - ✅ Surveille votre dossier Winamax HandHistory
+        - ✅ Upload automatiquement les nouveaux fichiers vers le serveur
+        - ✅ Fonctionne en temps réel pendant que vous jouez
+        - ✅ Se souvient des fichiers déjà uploadés (pas de doublons)
+
+        ### 📥 Installation en 3 étapes
+
+        1. **Téléchargez** le programme ci-dessous
+        2. **Installez** les dépendances: `pip install watchdog requests`
+        3. **Lancez** le programme et indiquez votre dossier HandHistory
+
+        ### 🚀 C'est parti !
+        """)
+
+        # Generate personalized watcher script
+        watcher_script = f"""#!/usr/bin/env python3
+\"\"\"
+🃏 Winamax Expresso Tracker - Auto Watcher
+Surveillance automatique de votre dossier HandHistory
+\"\"\"
+
+import os
+import time
+import requests
+from pathlib import Path
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import json
+
+# Configuration personnalisée
+SERVER_URL = "{API_URL.replace('/api', '')}"
+USER_ID = {user_id}
+
+class HandHistoryHandler(FileSystemEventHandler):
+    def __init__(self):
+        self.uploaded_files = set()
+        self.cache_file = Path.home() / ".poker_tracker_cache.json"
+        self.load_cache()
+
+    def load_cache(self):
+        if self.cache_file.exists():
+            try:
+                with open(self.cache_file, 'r') as f:
+                    data = json.load(f)
+                    self.uploaded_files = set(data.get("uploaded_files", []))
+                print(f"📂 {len(self.uploaded_files)} fichiers déjà traités")
+            except:
+                pass
+
+    def save_cache(self):
+        try:
+            with open(self.cache_file, 'w') as f:
+                json.dump({{"uploaded_files": list(self.uploaded_files)}}, f)
+        except:
+            pass
+
+    def on_created(self, event):
+        if not event.is_directory and event.src_path.endswith('.txt'):
+            print(f"\\n📥 Nouveau: {{Path(event.src_path).name}}")
+            time.sleep(1)
+            self.upload_file(event.src_path)
+
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith('.txt'):
+            if event.src_path not in self.uploaded_files:
+                print(f"\\n📝 Modifié: {{Path(event.src_path).name}}")
+                time.sleep(1)
+                self.upload_file(event.src_path)
+
+    def upload_file(self, file_path):
+        if file_path in self.uploaded_files:
+            return
+
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            files = {{'file': (Path(file_path).name, content, 'text/plain')}}
+            data = {{'user_id': USER_ID}}
+
+            response = requests.post(
+                f"{{SERVER_URL}}/api/import/file",
+                files=files,
+                data=data,
+                timeout=30
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                print(f"✅ {{result.get('tournaments_imported', 0)}} tournois importés")
+                self.uploaded_files.add(file_path)
+                self.save_cache()
+            else:
+                print(f"❌ Erreur {{response.status_code}}")
+        except Exception as e:
+            print(f"❌ {{str(e)}}")
+
+def main():
+    print("="*60)
+    print("🃏 WINAMAX EXPRESSO TRACKER - AUTO WATCHER")
+    print("="*60)
+    print(f"🌐 Serveur: {{SERVER_URL}}")
+    print(f"👤 Utilisateur ID: {{USER_ID}}")
+
+    # Chemins par défaut
+    default_paths = {{
+        "windows": "C:\\\\Users\\\\{{}}\\\\AppData\\\\Local\\\\Programs\\\\WinamaxPoker\\\\HandHistory",
+        "mac": "~/Library/Application Support/WinamaxPoker/HandHistory",
+        "linux": "~/.wine/drive_c/users/{{os.getlogin()}}/Local Settings/Application Data/WinamaxPoker/HandHistory"
+    }}
+
+    print("\\n📁 Entrez le chemin de votre dossier HandHistory:")
+    print(f"   Windows: {{default_paths['windows']}}")
+    print(f"   Mac: {{default_paths['mac']}}")
+
+    watch_path = input("\\n📂 Chemin: ").strip().strip('\"').strip(\"'\")
+
+    if not os.path.exists(watch_path):
+        print(f"❌ Dossier introuvable: {{watch_path}}")
+        return
+
+    print(f"\\n✅ Dossier trouvé!")
+
+    # Scanner fichiers existants
+    txt_files = list(Path(watch_path).glob("*.txt"))
+    print(f"🔍 {{len(txt_files)}} fichiers .txt trouvés")
+
+    if txt_files:
+        response = input("\\nUploader les fichiers existants ? (o/N): ").lower()
+        if response in ['o', 'oui']:
+            handler = HandHistoryHandler()
+            print("\\n📤 Upload en cours...")
+            for i, file_path in enumerate(txt_files, 1):
+                print(f"[{{i}}/{{len(txt_files)}}] {{file_path.name}}")
+                handler.upload_file(str(file_path))
+                time.sleep(0.5)
+            print("\\n✅ Upload terminé!")
+
+    # Démarrer surveillance
+    handler = HandHistoryHandler()
+    observer = Observer()
+    observer.schedule(handler, watch_path, recursive=False)
+    observer.start()
+
+    print("\\n" + "="*60)
+    print("👀 SURVEILLANCE ACTIVE")
+    print("="*60)
+    print(f"📂 {{watch_path}}")
+    print("🔄 Les nouveaux fichiers seront automatiquement uploadés")
+    print("\\n⏸️  Ctrl+C pour arrêter")
+    print("="*60)
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\\n\\n🛑 Arrêt...")
+        observer.stop()
+        observer.join()
+        print("👋 Au revoir!")
+
+if __name__ == "__main__":
+    main()
+"""
+
+        # Download button
+        st.download_button(
+            label="📥 Télécharger le Watcher (watcher.py)",
+            data=watcher_script,
+            file_name="watcher.py",
+            mime="text/plain",
+            help="Téléchargez ce script Python personnalisé pour votre compte"
+        )
+
+        st.info("""
+        **Après téléchargement:**
+        ```bash
+        # Installer les dépendances
+        pip install watchdog requests
+
+        # Lancer le watcher
+        python watcher.py
+        ```
+        """)
+
+    st.divider()
+
     # File upload import
-    st.subheader("📤 Importer vos Hand Histories")
+    st.subheader("📤 Import Manuel (Drag & Drop)")
 
     with st.expander("📖 **Comment importer tous vos fichiers en 3 clics**", expanded=True):
         st.markdown("""
