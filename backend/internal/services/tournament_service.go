@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+	"time"
 
 	"github.com/mathieudottir/poker_tracker/backend/internal/calculator"
 	"github.com/mathieudottir/poker_tracker/backend/internal/models"
@@ -103,5 +104,3 @@ type EVPoint struct {
 	Time time.Time `json:"time"`
 	EV   float64   `json:"ev"`
 }
-
-import "time"
