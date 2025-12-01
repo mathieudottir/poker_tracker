@@ -1,0 +1,800 @@
+import streamlit as st
+import streamlit.components.v1 as components
+import requests
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
+from datetime import datetime
+import os
+import base64
+
+# Backend API URL
+API_URL = os.getenv("API_URL", "http://localhost:8080/api")
+
+# Page configuration
+st.set_page_config(
+    page_title="Winamax Expresso Tracker",
+    page_icon="🃏",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Initialize session state
+if 'user' not in st.session_state:
+    st.session_state.user = None
+if 'user_id' not in st.session_state:
+    st.session_state.user_id = None
+
+def api_call(endpoint, method="GET", data=None):
+    """Make API call to backend"""
+    url = f"{API_URL}{endpoint}"
+    try:
+        if method == "GET":
+            response = requests.get(url)
+        elif method == "POST":
+            response = requests.post(url, json=data)
+        elif method == "PUT":
+            response = requests.put(url, json=data)
+        elif method == "DELETE":
+            response = requests.delete(url)
+
+        if response.status_code in [200, 201]:
+            return response.json()
+        else:
+            st.error(f"API Error: {response.status_code} - {response.text}")
+            return None
+    except Exception as e:
+        st.error(f"Connection Error: {str(e)}")
+        return None
+
+def login_page():
+    """Login page"""
+    st.title("🃏 Winamax Expresso Tracker")
+    st.subheader("Login")
+
+    # Dev mode login button
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+
+        if st.button("Login", type="primary"):
+            result = api_call("/auth/login", "POST", {
+                "username": username,
+                "password": password
+            })
+            if result:
+                st.session_state.user = result
+                st.session_state.user_id = result['id']
+                st.rerun()
+
+    with col2:
+        st.write("")
+        st.write("")
+        if st.button("🔧 Login as Mathieu (DEV)"):
+            result = api_call("/auth/dev-login", "POST", {
+                "username": "mathieu"
+            })
+            if result:
+                st.session_state.user = result
+                st.session_state.user_id = result['id']
+                st.rerun()
+
+    st.divider()
+
+    # Registration
+    with st.expander("Register New Account"):
+        reg_username = st.text_input("Username", key="reg_user")
+        reg_password = st.text_input("Password", type="password", key="reg_pass")
+        reg_player = st.text_input("Winamax Player Name", key="reg_player")
+
+        if st.button("Register"):
+            result = api_call("/auth/register", "POST", {
+                "username": reg_username,
+                "password": reg_password,
+                "player_name": reg_player
+            })
+            if result:
+                st.success("Registration successful! Please login.")
+
+def import_page():
+    """Import page"""
+    st.title("📥 Import Hand Histories")
+
+    user_id = st.session_state.user_id
+
+    # Watcher status (collapsed by default)
+    with st.expander("⚙️ Surveillance Automatique (Watcher) - Avancé"):
+        st.warning("""
+        ⚠️ **Ce mode est pour utilisateurs avancés seulement.**
+
+        Le watcher surveille un **dossier sur le SERVEUR** (pas votre PC).
+        Pour la plupart des utilisateurs, l'upload de fichiers ci-dessous est bien plus simple !
+        """)
+
+        watcher_status = api_call(f"/watcher/status/{user_id}")
+
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            if watcher_status and watcher_status.get('running'):
+                st.success(f"✅ Watcher actif sur: {watcher_status.get('directory')}")
+            else:
+                st.info("⚠️ Watcher inactif")
+
+        with col2:
+            if watcher_status and watcher_status.get('running'):
+                if st.button("⏸️ Arrêter", type="secondary"):
+                    result = api_call("/watcher/stop", "POST", {"user_id": user_id})
+                    if result:
+                        st.success("Watcher arrêté")
+                    st.rerun()
+            else:
+                if st.button("▶️ Démarrer", type="primary"):
+                    user_data = api_call(f"/user/{user_id}")
+                    if user_data and user_data.get('hh_directory'):
+                        result = api_call("/watcher/start", "POST", {
+                            "user_id": user_id,
+                            "directory": user_data['hh_directory']
+                        })
+                        if result:
+                            st.success("Watcher démarré!")
+                            st.rerun()
+                        else:
+                            st.error("❌ Le dossier n'existe pas sur le serveur. Allez dans Settings pour le créer.")
+                    else:
+                        st.error("⚠️ Configurez d'abord le chemin dans Settings")
+
+    st.divider()
+
+    # Auto-watcher for PC
+    st.subheader("🤖 Surveillance Automatique depuis votre PC")
+
+    with st.expander("📖 **Import automatique pendant que vous jouez** (RECOMMANDÉ)", expanded=False):
+        st.markdown("""
+        ### 🎯 Qu'est-ce que c'est ?
+
+        Un petit programme qui **tourne sur votre PC** et:
+        - ✅ Surveille votre dossier Winamax HandHistory
+        - ✅ Upload automatiquement les nouveaux fichiers vers le serveur
+        - ✅ Fonctionne en temps réel pendant que vous jouez
+        - ✅ Se souvient des fichiers déjà uploadés (pas de doublons)
+
+        ### 📥 Installation en 3 étapes
+
+        1. **Téléchargez** le programme ci-dessous
+        2. **Installez** les dépendances: `pip install watchdog requests`
+        3. **Lancez** le programme et indiquez votre dossier HandHistory
+
+        ### 🚀 C'est parti !
+        """)
+
+        # Generate personalized watcher script
+        watcher_script = f"""#!/usr/bin/env python3
+\"\"\"
+🃏 Winamax Expresso Tracker - Auto Watcher
+Surveillance automatique de votre dossier HandHistory
+\"\"\"
+
+import os
+import time
+import requests
+from pathlib import Path
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import json
+
+# Configuration personnalisée
+SERVER_URL = "{API_URL.replace('/api', '')}"
+USER_ID = {user_id}
+
+class HandHistoryHandler(FileSystemEventHandler):
+    def __init__(self):
+        self.uploaded_files = set()
+        self.cache_file = Path.home() / ".poker_tracker_cache.json"
+        self.load_cache()
+
+    def load_cache(self):
+        if self.cache_file.exists():
+            try:
+                with open(self.cache_file, 'r') as f:
+                    data = json.load(f)
+                    self.uploaded_files = set(data.get("uploaded_files", []))
+                print(f"📂 {{len(self.uploaded_files)}} fichiers déjà traités")
+            except:
+                pass
+
+    def save_cache(self):
+        try:
+            with open(self.cache_file, 'w') as f:
+                json.dump({{"uploaded_files": list(self.uploaded_files)}}, f)
+        except:
+            pass
+
+    def on_created(self, event):
+        if not event.is_directory and event.src_path.endswith('.txt'):
+            print(f"\\n📥 Nouveau: {{Path(event.src_path).name}}")
+            time.sleep(1)
+            self.upload_file(event.src_path)
+
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith('.txt'):
+            if event.src_path not in self.uploaded_files:
+                print(f"\\n📝 Modifié: {{Path(event.src_path).name}}")
+                time.sleep(1)
+                self.upload_file(event.src_path)
+
+    def upload_file(self, file_path):
+        if file_path in self.uploaded_files:
+            return
+
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            files = {{'file': (Path(file_path).name, content, 'text/plain')}}
+            data = {{'user_id': USER_ID}}
+
+            response = requests.post(
+                f"{{SERVER_URL}}/api/import/file",
+                files=files,
+                data=data,
+                timeout=30
+            )
+
+            if response.status_code == 200:
+                result = response.json()
+                print(f"✅ {{result.get('tournaments_imported', 0)}} tournois importés")
+                self.uploaded_files.add(file_path)
+                self.save_cache()
+            else:
+                print(f"❌ Erreur {{response.status_code}}")
+        except Exception as e:
+            print(f"❌ {{str(e)}}")
+
+def main():
+    print("="*60)
+    print("🃏 WINAMAX EXPRESSO TRACKER - AUTO WATCHER")
+    print("="*60)
+    print(f"🌐 Serveur: {{SERVER_URL}}")
+    print(f"👤 Utilisateur ID: {{USER_ID}}")
+
+    # Chemins par défaut
+    default_paths = {{
+        "windows": "C:\\\\Users\\\\{{}}\\\\AppData\\\\Local\\\\Programs\\\\WinamaxPoker\\\\HandHistory",
+        "mac": "~/Library/Application Support/WinamaxPoker/HandHistory",
+        "linux": "~/.wine/drive_c/users/{{os.getlogin()}}/Local Settings/Application Data/WinamaxPoker/HandHistory"
+    }}
+
+    print("\\n📁 Entrez le chemin de votre dossier HandHistory:")
+    print(f"   Windows: {{default_paths['windows']}}")
+    print(f"   Mac: {{default_paths['mac']}}")
+
+    watch_path = input("\\n📂 Chemin: ").strip().strip('\"').strip(\"'\")
+
+    if not os.path.exists(watch_path):
+        print(f"❌ Dossier introuvable: {{watch_path}}")
+        return
+
+    print(f"\\n✅ Dossier trouvé!")
+
+    # Scanner fichiers existants
+    txt_files = list(Path(watch_path).glob("*.txt"))
+    print(f"🔍 {{len(txt_files)}} fichiers .txt trouvés")
+
+    if txt_files:
+        response = input("\\nUploader les fichiers existants ? (o/N): ").lower()
+        if response in ['o', 'oui']:
+            handler = HandHistoryHandler()
+            print("\\n📤 Upload en cours...")
+            for i, file_path in enumerate(txt_files, 1):
+                print(f"[{{i}}/{{len(txt_files)}}] {{file_path.name}}")
+                handler.upload_file(str(file_path))
+                time.sleep(0.5)
+            print("\\n✅ Upload terminé!")
+
+    # Démarrer surveillance
+    handler = HandHistoryHandler()
+    observer = Observer()
+    observer.schedule(handler, watch_path, recursive=False)
+    observer.start()
+
+    print("\\n" + "="*60)
+    print("👀 SURVEILLANCE ACTIVE")
+    print("="*60)
+    print(f"📂 {{watch_path}}")
+    print("🔄 Les nouveaux fichiers seront automatiquement uploadés")
+    print("\\n⏸️  Ctrl+C pour arrêter")
+    print("="*60)
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\\n\\n🛑 Arrêt...")
+        observer.stop()
+        observer.join()
+        print("👋 Au revoir!")
+
+if __name__ == "__main__":
+    main()
+"""
+
+        # Download button
+        st.download_button(
+            label="📥 Télécharger le Watcher (watcher.py)",
+            data=watcher_script,
+            file_name="watcher.py",
+            mime="text/plain",
+            help="Téléchargez ce script Python personnalisé pour votre compte"
+        )
+
+        st.info("""
+        **Après téléchargement:**
+        ```bash
+        # Installer les dépendances
+        pip install watchdog requests
+
+        # Lancer le watcher
+        python watcher.py
+        ```
+        """)
+
+    st.divider()
+
+    # File upload import
+    st.subheader("📤 Import Manuel (Drag & Drop)")
+
+    with st.expander("📖 **Comment importer tous vos fichiers en 3 clics**", expanded=True):
+        st.markdown("""
+        1. 📁 Sur votre PC, ouvrez votre dossier **Winamax HandHistory**
+           - Windows: `C:\\Users\\VotreNom\\AppData\\Local\\Programs\\WinamaxPoker\\HandHistory\\VotreNom`
+           - Mac: `~/Library/Application Support/WinamaxPoker/HandHistory/VotreNom`
+
+        2. ⌨️ Sélectionnez **TOUS** les fichiers .txt
+           - Windows: **Ctrl + A**
+           - Mac: **Cmd + A**
+
+        3. 🎯 **Glissez-déposez** les fichiers ci-dessous
+           - OU cliquez "Browse files" et validez
+
+        💡 **Vous pouvez importer des milliers de fichiers d'un coup !**
+        """)
+
+    uploaded_files = st.file_uploader(
+        "📁 Glissez-déposez vos fichiers .txt ici",
+        type=['txt'],
+        accept_multiple_files=True,
+        help="Faites Ctrl+A dans votre dossier HandHistory pour tout sélectionner, puis glissez ici",
+        key="file_uploader"
+    )
+
+    if uploaded_files:
+        st.success(f"✅ **{len(uploaded_files)} fichier(s)** prêts à être importés")
+
+        if st.button("🚀 IMPORTER", type="primary", use_container_width=True):
+            with st.spinner(f"⏳ Traitement de {len(uploaded_files)} fichier(s)..."):
+                import tempfile
+                import shutil
+
+                # Create temp directory
+                temp_dir = tempfile.mkdtemp()
+
+                try:
+                    # Save uploaded files with progress
+                    progress_text = st.empty()
+                    progress_bar = st.progress(0)
+
+                    for idx, uploaded_file in enumerate(uploaded_files):
+                        progress_text.text(f"📥 Téléchargement {idx+1}/{len(uploaded_files)}: {uploaded_file.name}")
+                        file_path = os.path.join(temp_dir, uploaded_file.name)
+                        with open(file_path, 'wb') as f:
+                            f.write(uploaded_file.getbuffer())
+                        progress_bar.progress((idx + 1) / len(uploaded_files))
+
+                    progress_text.text("🔍 Analyse et import des tournois...")
+
+                    # Import from temp directory
+                    result = api_call("/import/directory", "POST", {
+                        "user_id": user_id,
+                        "directory": temp_dir
+                    })
+
+                    progress_bar.empty()
+                    progress_text.empty()
+
+                    if result:
+                        st.success(f"""
+                        🎉 **Import réussi !**
+
+                        - 📊 **{result.get('count', 0)} tournois** importés
+                        - 📁 Depuis **{len(uploaded_files)} fichiers**
+                        """)
+                        st.balloons()
+                        st.rerun()
+                    else:
+                        st.error("❌ Erreur lors de l'import des tournois")
+                except Exception as e:
+                    st.error(f"❌ Erreur: {str(e)}")
+                finally:
+                    # Cleanup temp directory
+                    shutil.rmtree(temp_dir, ignore_errors=True)
+
+    st.divider()
+
+    # Import logs
+    st.subheader("📜 Historique d'Import")
+    logs = api_call("/import/logs")
+    if logs:
+        for log in logs[-20:]:  # Show last 20 logs
+            st.text(log)
+
+def results_page():
+    """Results page"""
+    st.title("📊 My Results")
+
+    user_id = st.session_state.user_id
+
+    # Get tournaments and user data
+    tournaments = api_call(f"/tournaments/{user_id}")
+    user_data = api_call(f"/user/{user_id}")
+
+    if not tournaments:
+        st.warning("No tournaments found. Import some hand histories first!")
+        return
+
+    # Get user rakeback status
+    user_status = user_data.get('status', 'Aluminium') if user_data else 'Aluminium'
+    rakeback_pct_map = {
+        'Aluminium': 0,
+        'Bronze': 10.0,
+        'Argent': 15.0,
+        'Or': 20.0,
+        'Platine': 25.0,
+        'Diamant': 30.0,
+        'Red Diamond': 33.0
+    }
+    rakeback_pct = rakeback_pct_map.get(user_status, 0)
+
+    # Convert to DataFrame
+    df = pd.DataFrame(tournaments)
+    df['start_time'] = pd.to_datetime(df['start_time'])
+    df['buyin_euros'] = df['buyin_cents'] / 100
+    df['net_result_euros'] = df['net_result_cents'] / 100
+    df['ev_euros'] = df['ev_cents'] / 100
+    df['rake_euros'] = df['rake_cents'] / 100
+    df['rakeback_euros'] = df['rake_euros'] * (rakeback_pct / 100.0)
+    df['result_with_rakeback_euros'] = df['net_result_euros'] + df['rakeback_euros']
+
+    # Date range filter
+    st.subheader("🗓️ Filtres")
+    col1, col2 = st.columns(2)
+    with col1:
+        min_date = df['start_time'].min().date()
+        max_date = df['start_time'].max().date()
+        start_date = st.date_input("Date de début", value=min_date, min_value=min_date, max_value=max_date)
+    with col2:
+        end_date = st.date_input("Date de fin", value=max_date, min_value=min_date, max_value=max_date)
+
+    # Filter dataframe
+    mask = (df['start_time'].dt.date >= start_date) & (df['start_time'].dt.date <= end_date)
+    df = df[mask]
+
+    if len(df) == 0:
+        st.warning("Aucun tournoi dans cette plage de dates")
+        return
+
+    # Summary metrics
+    col1, col2, col3, col4, col5 = st.columns(5)
+
+    with col1:
+        st.metric("Total Tournaments", len(df))
+    with col2:
+        total_profit = df['net_result_euros'].sum()
+        st.metric("Total Profit", f"€{total_profit:.2f}")
+    with col3:
+        total_rakeback = df['rakeback_euros'].sum()
+        st.metric(f"Rakeback ({user_status})", f"€{total_rakeback:.2f}")
+    with col4:
+        total_with_rb = df['result_with_rakeback_euros'].sum()
+        st.metric("Profit + Rakeback", f"€{total_with_rb:.2f}")
+    with col5:
+        total_ev = df['ev_euros'].sum()
+        st.metric("Total EV", f"€{total_ev:.2f}")
+
+    st.divider()
+
+    # Bankroll curve
+    st.subheader("Bankroll Evolution")
+    df_sorted = df.sort_values('start_time').reset_index(drop=True)
+    df_sorted['cumulative'] = df_sorted['net_result_euros'].cumsum()
+    df_sorted['cumulative_with_rakeback'] = df_sorted['result_with_rakeback_euros'].cumsum()
+    df_sorted['tournament_number'] = range(1, len(df_sorted) + 1)
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative'],
+        mode='lines+markers',
+        name='Sans Rakeback',
+        line=dict(color='orange', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<br>Date: %{customdata}<extra></extra>',
+        customdata=df_sorted['start_time'].dt.strftime('%Y-%m-%d %H:%M')
+    ))
+    fig.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative_with_rakeback'],
+        mode='lines+markers',
+        name=f'Avec Rakeback ({user_status} {rakeback_pct}%)',
+        line=dict(color='green', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit+RB: €%{y:.2f}<br>Date: %{customdata}<extra></extra>',
+        customdata=df_sorted['start_time'].dt.strftime('%Y-%m-%d %H:%M')
+    ))
+    fig.update_layout(
+        title="Évolution de la Bankroll",
+        xaxis_title="Numéro de Tournoi",
+        yaxis_title="Profit (€)",
+        hovermode='x unified'
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    # EV curve
+    st.subheader("Évolution EV vs Résultats Réels")
+    df_sorted['cumulative_ev'] = df_sorted['ev_euros'].cumsum()
+
+    fig2 = go.Figure()
+    fig2.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative_ev'],
+        mode='lines+markers',
+        name='EV Théorique',
+        line=dict(color='blue', width=2),
+        hovertemplate='Tournoi #%{x}<br>EV: €%{y:.2f}<extra></extra>'
+    ))
+    fig2.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative'],
+        mode='lines+markers',
+        name='Résultats Réels (sans RB)',
+        line=dict(color='orange', width=2, dash='dash'),
+        hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<extra></extra>'
+    ))
+    fig2.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative_with_rakeback'],
+        mode='lines+markers',
+        name=f'Résultats + Rakeback ({rakeback_pct}%)',
+        line=dict(color='green', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit+RB: €%{y:.2f}<extra></extra>'
+    ))
+    fig2.update_layout(
+        title="EV vs Résultats Réels (avec Rakeback)",
+        xaxis_title="Numéro de Tournoi",
+        yaxis_title="Valeur (€)",
+        hovermode='x unified',
+        legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01)
+    )
+    st.plotly_chart(fig2, use_container_width=True)
+
+    # Multiplier distribution
+    st.subheader("Distribution des Multiplicateurs")
+    try:
+        mult_dist = api_call(f"/stats/{user_id}/multipliers")
+        if mult_dist and isinstance(mult_dist, dict):
+            mult_df = pd.DataFrame(list(mult_dist.items()), columns=['Multiplicateur', 'Nombre'])
+            mult_df['Multiplicateur'] = mult_df['Multiplicateur'].astype(int)
+            mult_df = mult_df.sort_values('Multiplicateur')
+            fig3 = px.bar(mult_df, x='Multiplicateur', y='Nombre',
+                         title='Multiplicateurs Obtenus',
+                         color='Nombre',
+                         color_continuous_scale='Greens')
+            st.plotly_chart(fig3, use_container_width=True)
+        else:
+            # Calculate from filtered data if API fails
+            mult_counts = df['multiplier'].value_counts().sort_index()
+            fig3 = px.bar(x=mult_counts.index, y=mult_counts.values,
+                         labels={'x': 'Multiplicateur', 'y': 'Nombre'},
+                         title='Multiplicateurs Obtenus')
+            st.plotly_chart(fig3, use_container_width=True)
+    except Exception as e:
+        st.error(f"Erreur lors du chargement des multiplicateurs: {str(e)}")
+
+    st.divider()
+
+    # Tournament table
+    st.subheader("Tournament History")
+    display_df = df[['start_time', 'buyin_euros', 'multiplier', 'hero_rank', 'net_result_euros', 'ev_euros']].copy()
+    display_df.columns = ['Date', 'Buy-in (€)', 'Multiplier', 'Finish', 'Profit (€)', 'EV (€)']
+    st.dataframe(display_df, use_container_width=True)
+
+def statistics_page():
+    """Statistics page"""
+    st.title("📈 Statistics")
+
+    user_id = st.session_state.user_id
+
+    # Get stats
+    stats = api_call(f"/stats/{user_id}")
+
+    if not stats:
+        st.warning("No statistics available yet.")
+        return
+
+    # Overall stats
+    st.subheader("Overall Statistics")
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Total Tournaments", stats.get('total_tournaments', 0))
+        st.metric("Total Hands", stats.get('total_hands', 0))
+    with col2:
+        st.metric("Net Profit", f"€{stats.get('net_result_cents', 0)/100:.2f}")
+        st.metric("EV", f"€{stats.get('ev_cents', 0)/100:.2f}")
+    with col3:
+        st.metric("Net ROI", f"{stats.get('net_roi', 0):.2f}%")
+        st.metric("EV ROI", f"{stats.get('ev_roi', 0):.2f}%")
+
+    st.divider()
+
+    # Rake stats
+    st.subheader("Rake & Rakeback")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("Total Rake Paid", f"€{stats.get('total_rake_cents', 0)/100:.2f}")
+    with col2:
+        st.metric("Rakeback Earned", f"€{stats.get('total_rakeback_cents', 0)/100:.2f}")
+
+    st.divider()
+
+    # Results by buy-in
+    st.subheader("Results by Buy-in")
+    by_buyin = api_call(f"/stats/{user_id}/bybuyin")
+
+    if by_buyin:
+        buyin_data = []
+        for buyin_cents, data in by_buyin.items():
+            buyin_data.append({
+                'Buy-in (€)': int(buyin_cents) / 100,
+                'Tournaments': data.get('total_tournaments', 0),
+                'Profit (€)': data.get('net_result_cents', 0) / 100,
+                'EV (€)': data.get('ev_cents', 0) / 100,
+                'ROI (%)': data.get('net_roi', 0)
+            })
+
+        buyin_df = pd.DataFrame(buyin_data)
+        st.dataframe(buyin_df, use_container_width=True)
+
+def settings_page():
+    """Settings page"""
+    st.title("⚙️ Settings")
+
+    user_id = st.session_state.user_id
+    user = api_call(f"/user/{user_id}")
+
+    if not user:
+        st.error("Failed to load user settings")
+        return
+
+    st.subheader("User Settings")
+
+    player_name = st.text_input("Winamax Player Name", value=user.get('player_name', ''))
+
+    st.subheader("📁 Hand History Directory (pour Watcher)")
+    st.info("""
+    ⚠️ **Important:** Ce chemin est sur le SERVEUR, pas sur votre PC.
+
+    - ✅ **Pour importer depuis votre PC** → Utilisez l'upload de fichiers dans l'onglet Import
+    - ⚙️ **Pour surveiller un dossier serveur** → Configurez ce chemin (avancé)
+    """)
+
+    hh_directory = st.text_input(
+        "Chemin serveur (optionnel)",
+        value=user.get('hh_directory', ''),
+        placeholder="/home/mathieudottir/winamax_hh",
+        help="Chemin absolu sur le serveur pour la surveillance automatique"
+    )
+
+    if st.button("📁 Créer le dossier sur le serveur"):
+        import os
+        server_path = "/home/mathieudottir/winamax_hh"
+        try:
+            os.makedirs(server_path, exist_ok=True)
+            st.success(f"✅ Dossier créé: {server_path}")
+            hh_directory = server_path
+        except Exception as e:
+            st.error(f"❌ Erreur: {str(e)}")
+
+    # Winamax status
+    rakeback_statuses = api_call("/winamax/rakeback")
+    status_names = [s['status_name'] for s in rakeback_statuses] if rakeback_statuses else []
+
+    current_status = user.get('wina_status', 'Aluminium')
+    status_index = status_names.index(current_status) if current_status in status_names else 0
+
+    wina_status = st.selectbox(
+        "Winamax Status",
+        status_names,
+        index=status_index
+    )
+
+    dev_mode = st.checkbox("Dev Mode", value=user.get('dev_mode', False))
+
+    if st.button("Save Settings", type="primary"):
+        result = api_call(f"/user/{user_id}/settings", "PUT", {
+            "player_name": player_name,
+            "wina_status": wina_status,
+            "hh_directory": hh_directory,
+            "dev_mode": dev_mode
+        })
+        if result:
+            st.success("Settings saved successfully!")
+            st.rerun()
+
+    st.divider()
+
+    # Database reset
+    st.subheader("⚠️ Danger Zone")
+    st.warning("The following action will delete ALL your data permanently!")
+
+    if 'confirm_reset' not in st.session_state:
+        st.session_state.confirm_reset = False
+
+    if not st.session_state.confirm_reset:
+        if st.button("🗑️ Reset My Database", type="secondary"):
+            st.session_state.confirm_reset = True
+            st.rerun()
+    else:
+        st.error("⚠️ ATTENTION: Cette action est irréversible!")
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("✅ OUI, supprimer toutes mes données", type="primary"):
+                api_call(f"/user/{user_id}/data", "DELETE")
+                st.success("Toutes les données supprimées. Déconnexion...")
+                st.session_state.user = None
+                st.session_state.user_id = None
+                st.session_state.confirm_reset = False
+                st.rerun()
+        with col2:
+            if st.button("❌ Annuler"):
+                st.session_state.confirm_reset = False
+                st.rerun()
+
+def main():
+    """Main app"""
+
+    # Check if logged in
+    if not st.session_state.user:
+        login_page()
+        return
+
+    # Sidebar
+    with st.sidebar:
+        st.title("Navigation")
+        user = st.session_state.user
+        st.write(f"👤 {user.get('player_name', user.get('username'))}")
+
+        page = st.radio(
+            "Go to",
+            ["Import", "My Results", "Statistics", "Settings"],
+            label_visibility="collapsed"
+        )
+
+        st.divider()
+
+        if st.button("Logout"):
+            st.session_state.user = None
+            st.session_state.user_id = None
+            st.rerun()
+
+    # Show selected page
+    if page == "Import":
+        import_page()
+    elif page == "My Results":
+        results_page()
+    elif page == "Statistics":
+        statistics_page()
+    elif page == "Settings":
+        settings_page()
+
+if __name__ == "__main__":
+    main()
