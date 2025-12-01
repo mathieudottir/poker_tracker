@@ -15,7 +15,11 @@ import (
 
 func main() {
 	// Load configuration
-	cfg, err := config.LoadConfig("config.yaml")
+	configPath := "config.yaml"
+	if _, err := os.Stat(configPath); os.IsNotExist(err) {
+		configPath = "../config.yaml"
+	}
+	cfg, err := config.LoadConfig(configPath)
 	if err != nil {
 		log.Fatalf("Failed to load config: %v", err)
 	}

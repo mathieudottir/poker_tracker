@@ -35,6 +35,7 @@ cd backend
 nohup go run cmd/server/main.go > ../logs/backend.log 2>&1 &
 BACKEND_PID=$!
 cd ..
+sleep 2
 
 echo "⏳ Attente du backend..."
 sleep 8
