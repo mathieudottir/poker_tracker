@@ -3,8 +3,11 @@ package api
 import (
 	"context"
 	"encoding/json"
+	"io"
 	"log"
 	"net/http"
+	"os"
+	"path/filepath"
 	"strconv"
 
 	"github.com/gorilla/mux"
@@ -57,6 +60,7 @@ func (api *API) SetupRoutes() *mux.Router {
 	// Import endpoints
 	r.HandleFunc("/api/import/tournament", api.handleImportTournament).Methods("POST", "OPTIONS")
 	r.HandleFunc("/api/import/directory", api.handleImportDirectory).Methods("POST", "OPTIONS")
+	r.HandleFunc("/api/import/files", api.handleImportFiles).Methods("POST", "OPTIONS")
 	r.HandleFunc("/api/import/logs", api.handleGetImportLogs).Methods("GET", "OPTIONS")
 
 	// Watcher endpoints
@@ -268,6 +272,72 @@ func (api *API) handleImportDirectory(w http.ResponseWriter, r *http.Request) {
 	count, err := api.importService.ImportDirectory(r.Context(), req.UserID, req.Directory)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	respondJSON(w, map[string]interface{}{"status": "imported", "count": count})
+}
+
+func (api *API) handleImportFiles(w http.ResponseWriter, r *http.Request) {
+	// Parse multipart form (max 100MB)
+	if err := r.ParseMultipartForm(100 << 20); err != nil {
+		http.Error(w, "Failed to parse form: "+err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	userIDStr := r.FormValue("user_id")
+	if userIDStr == "" {
+		http.Error(w, "user_id is required", http.StatusBadRequest)
+		return
+	}
+
+	userID, err := strconv.Atoi(userIDStr)
+	if err != nil {
+		http.Error(w, "Invalid user_id", http.StatusBadRequest)
+		return
+	}
+
+	files := r.MultipartForm.File["files"]
+	if len(files) == 0 {
+		http.Error(w, "No files uploaded", http.StatusBadRequest)
+		return
+	}
+
+	// Create temp directory
+	tempDir, err := os.MkdirTemp("", "poker_import_*")
+	if err != nil {
+		http.Error(w, "Failed to create temp directory: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer os.RemoveAll(tempDir)
+
+	// Save uploaded files to temp directory
+	for _, fileHeader := range files {
+		file, err := fileHeader.Open()
+		if err != nil {
+			http.Error(w, "Failed to open uploaded file: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+		defer file.Close()
+
+		destPath := filepath.Join(tempDir, fileHeader.Filename)
+		destFile, err := os.Create(destPath)
+		if err != nil {
+			http.Error(w, "Failed to create file: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+		defer destFile.Close()
+
+		if _, err := io.Copy(destFile, file); err != nil {
+			http.Error(w, "Failed to save file: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+
+	// Import from temp directory
+	count, err := api.importService.ImportDirectory(r.Context(), userID, tempDir)
+	if err != nil {
+		http.Error(w, "Import failed: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
 
