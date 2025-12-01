@@ -48,11 +48,18 @@ func (s *ImportService) ImportTournament(ctx context.Context, userID int, hhFile
 	}
 
 	// Calculate multiplier and prize distribution
-	multiplier := calculator.DetermineMultiplier(summary.PrizepoolCents, summary.BuyinCents)
-	prize1, prize2, prize3 := calculator.GetPrizeDistribution(summary.BuyinCents, multiplier)
+	multiplier := calculator.DetermineMultiplier(summary.PrizepoolCents, summary.BuyinCents, summary.RakeCents)
 
-	// Calculate EV
-	expectedEV := calculator.CalculateTournamentEV(summary.BuyinCents)
+	// For Expresso Nitro, use total entry (buyin + rake) for calculations
+	totalEntryCents := summary.BuyinCents + summary.RakeCents
+
+	// Expresso Nitro is winner-takes-all
+	prize1 := summary.PrizepoolCents
+	prize2 := 0
+	prize3 := 0
+
+	// Calculate EV based on total entry (for proper lookup in constants table)
+	expectedEV := calculator.CalculateTournamentEV(totalEntryCents)
 
 	// Calculate net result
 	netResult := calculator.CalculateNetResult(summary.PrizeWonCents, summary.BuyinCents, summary.RakeCents)

@@ -93,23 +93,24 @@ func GetMultiplierProbabilities(buyinCents int) []models.MultiplierExpected {
 }
 
 // GetExpectedEV calculates the expected value for a given buy-in based on multiplier probabilities
-// EV = sum of (probability * prize1 * 1/3 + probability * prize2 * 1/3 + probability * prize3 * 1/3) - buyin
-func GetExpectedEV(buyinCents int) float64 {
-	multipliers := GetMultiplierProbabilities(buyinCents)
+// For Expresso Nitro (winner-takes-all): EV = sum(probability * (prizepool/3 - entry))
+func GetExpectedEV(totalEntryCents int) float64 {
+	multipliers := GetMultiplierProbabilities(totalEntryCents)
 	if len(multipliers) == 0 {
 		return 0
 	}
 
 	var ev float64
 	for _, m := range multipliers {
-		// Each player has 1/3 chance of finishing 1st, 2nd, or 3rd
-		// EV for this multiplier = prob * (prize1/3 + prize2/3 + prize3/3)
-		avgPrize := (float64(m.Prize1Cents) + float64(m.Prize2Cents) + float64(m.Prize3Cents)) / 3.0
-		ev += m.Probability * avgPrize
+		// Expresso Nitro is winner-takes-all: 1/3 chance to win prizepool
+		// Prizepool for this multiplier = total_entry * multiplier
+		prizepool := float64(totalEntryCents) * m.Multiplier
+		// EV for this multiplier = prob * (1/3 * prizepool - total_entry)
+		evForMultiplier := (prizepool / 3.0) - float64(totalEntryCents)
+		ev += m.Probability * evForMultiplier
 	}
 
-	// Subtract the buy-in to get net EV
-	return ev - float64(buyinCents)
+	return ev
 }
 
 // GetRakebackForStatus returns the rakeback percentage for a given status

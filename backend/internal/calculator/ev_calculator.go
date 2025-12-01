@@ -39,13 +39,19 @@ func CalculateRakeback(totalRakeCents int, status string) int {
 }
 
 // DetermineMultiplier determines the multiplier based on prizepool and buy-in
-func DetermineMultiplier(prizepoolCents, buyinCents int) float64 {
-	if buyinCents == 0 {
+// For Expresso Nitro (winner-takes-all): multiplier = prizepool / total_entry
+func DetermineMultiplier(prizepoolCents, buyinCents, rakeCents int) float64 {
+	totalEntry := buyinCents + rakeCents
+	if totalEntry == 0 {
 		return 0
 	}
-	// Prizepool = buyin * 3 * multiplier (for 3 players)
-	// So multiplier = prizepool / (buyin * 3)
-	return float64(prizepoolCents) / float64(buyinCents*3)
+	// Expresso Nitro: prizepool = (buyin + rake) * multiplier
+	// So multiplier = prizepool / (buyin + rake)
+	multiplier := float64(prizepoolCents) / float64(totalEntry)
+
+	// Round to nearest integer multiplier (2, 3, 4, 5, 10, etc.)
+	rounded := int(multiplier + 0.5)
+	return float64(rounded)
 }
 
 // GetPrizeDistribution returns prize distribution for a given multiplier and buy-in
