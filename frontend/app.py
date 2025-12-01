@@ -133,13 +133,13 @@ def import_page():
 
     # File upload import
     st.subheader("📤 Upload Hand Histories")
-    st.write("Upload your Winamax .txt hand history files directly from your computer")
+    st.info("💡 **Tip:** Pour importer tout un dossier, allez dans votre dossier Winamax HandHistory, sélectionnez tous les fichiers .txt (Ctrl+A / Cmd+A), puis glissez-les ici.")
 
     uploaded_files = st.file_uploader(
-        "Choose hand history files",
+        "Sélectionnez vos fichiers hand history (.txt)",
         type=['txt'],
         accept_multiple_files=True,
-        help="Select one or more .txt files from your Winamax hand history folder"
+        help="Vous pouvez sélectionner plusieurs fichiers en même temps"
     )
 
     if uploaded_files:
