@@ -1,10 +1,12 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import requests
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from datetime import datetime
 import os
+import base64
 
 # Backend API URL
 API_URL = os.getenv("API_URL", "http://localhost:8080/api")
@@ -133,44 +135,93 @@ def import_page():
 
     # File upload import
     st.subheader("📤 Upload Hand Histories")
-    st.info("💡 **Tip:** Pour importer tout un dossier, allez dans votre dossier Winamax HandHistory, sélectionnez tous les fichiers .txt (Ctrl+A / Cmd+A), puis glissez-les ici.")
 
-    uploaded_files = st.file_uploader(
-        "Sélectionnez vos fichiers hand history (.txt)",
-        type=['txt'],
-        accept_multiple_files=True,
-        help="Vous pouvez sélectionner plusieurs fichiers en même temps"
+    upload_method = st.radio(
+        "Méthode d'import :",
+        ["📁 Sélectionner un dossier complet", "📄 Sélectionner des fichiers individuels"],
+        key="upload_method"
     )
 
-    if uploaded_files:
-        if st.button("Import Uploaded Files", type="primary"):
-            with st.spinner(f"Importing {len(uploaded_files)} file(s)..."):
-                import tempfile
-                import os
+    if upload_method == "📁 Sélectionner un dossier complet":
+        st.info("💡 Cliquez sur 'Choisir un dossier', puis sélectionnez votre dossier Winamax HandHistory. Tous les fichiers .txt seront importés automatiquement.")
 
-                # Create temp directory
-                temp_dir = tempfile.mkdtemp()
+        # HTML folder picker
+        folder_html = """
+        <div style="padding: 20px; border: 2px dashed #4CAF50; border-radius: 10px; text-align: center; background-color: #f9f9f9;">
+            <input type="file" id="folderInput" webkitdirectory directory multiple style="display: none;" />
+            <button onclick="document.getElementById('folderInput').click();"
+                    style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                📁 Choisir un dossier
+            </button>
+            <p id="fileCount" style="margin-top: 10px; color: #666;"></p>
+        </div>
+        <script>
+        const fileInput = document.getElementById('folderInput');
+        fileInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files).filter(f => f.name.endsWith('.txt'));
+            document.getElementById('fileCount').textContent = files.length + ' fichiers .txt trouvés';
 
-                try:
-                    # Save uploaded files to temp directory
-                    for uploaded_file in uploaded_files:
-                        file_path = os.path.join(temp_dir, uploaded_file.name)
-                        with open(file_path, 'wb') as f:
-                            f.write(uploaded_file.getbuffer())
+            // Send files to Streamlit
+            const fileData = files.map(f => ({
+                name: f.name,
+                size: f.size
+            }));
+            window.parent.postMessage({type: 'streamlit:setComponentValue', value: fileData}, '*');
+        });
+        </script>
+        """
 
-                    # Import from temp directory
-                    result = api_call("/import/directory", "POST", {
-                        "user_id": user_id,
-                        "directory": temp_dir
-                    })
+        file_data = components.html(folder_html, height=150)
 
-                    if result:
-                        st.success(f"✅ Imported {result.get('count', 0)} tournaments from {len(uploaded_files)} file(s)")
-                        st.rerun()
-                finally:
-                    # Cleanup temp directory
+        if file_data and len(file_data) > 0:
+            st.success(f"✅ {len(file_data)} fichiers .txt sélectionnés")
+            st.write("Pour importer, utilisez la méthode 'Sélectionner des fichiers individuels' et faites Ctrl+A dans votre dossier.")
+
+    else:
+        st.info("💡 **Astuce:** Ouvrez votre dossier Winamax HandHistory, faites Ctrl+A (ou Cmd+A sur Mac) pour tout sélectionner, puis cliquez sur 'Browse files' ci-dessous.")
+
+        uploaded_files = st.file_uploader(
+            "Sélectionnez vos fichiers hand history (.txt)",
+            type=['txt'],
+            accept_multiple_files=True,
+            help="Vous pouvez sélectionner plusieurs fichiers en même temps avec Ctrl+A",
+            key="file_uploader"
+        )
+
+        if uploaded_files:
+            st.info(f"📊 {len(uploaded_files)} fichier(s) sélectionné(s)")
+            if st.button("🚀 Importer les fichiers", type="primary"):
+                with st.spinner(f"Import de {len(uploaded_files)} fichier(s) en cours..."):
+                    import tempfile
                     import shutil
-                    shutil.rmtree(temp_dir, ignore_errors=True)
+
+                    # Create temp directory
+                    temp_dir = tempfile.mkdtemp()
+
+                    try:
+                        # Save uploaded files to temp directory
+                        for uploaded_file in uploaded_files:
+                            file_path = os.path.join(temp_dir, uploaded_file.name)
+                            with open(file_path, 'wb') as f:
+                                f.write(uploaded_file.getbuffer())
+
+                        # Import from temp directory
+                        result = api_call("/import/directory", "POST", {
+                            "user_id": user_id,
+                            "directory": temp_dir
+                        })
+
+                        if result:
+                            st.success(f"✅ Importé {result.get('count', 0)} tournois depuis {len(uploaded_files)} fichier(s)")
+                            st.balloons()
+                            st.rerun()
+                        else:
+                            st.error("❌ Erreur lors de l'import")
+                    except Exception as e:
+                        st.error(f"❌ Erreur: {str(e)}")
+                    finally:
+                        # Cleanup temp directory
+                        shutil.rmtree(temp_dir, ignore_errors=True)
 
     st.divider()
 
@@ -410,13 +461,28 @@ def settings_page():
     st.subheader("⚠️ Danger Zone")
     st.warning("The following action will delete ALL your data permanently!")
 
-    if st.button("Reset My Database", type="secondary"):
-        if st.button("⚠️ Confirm Delete All Data"):
-            api_call(f"/user/{user_id}/data", "DELETE")
-            st.success("All data deleted. Logging out...")
-            st.session_state.user = None
-            st.session_state.user_id = None
+    if 'confirm_reset' not in st.session_state:
+        st.session_state.confirm_reset = False
+
+    if not st.session_state.confirm_reset:
+        if st.button("🗑️ Reset My Database", type="secondary"):
+            st.session_state.confirm_reset = True
             st.rerun()
+    else:
+        st.error("⚠️ ATTENTION: Cette action est irréversible!")
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("✅ OUI, supprimer toutes mes données", type="primary"):
+                api_call(f"/user/{user_id}/data", "DELETE")
+                st.success("Toutes les données supprimées. Déconnexion...")
+                st.session_state.user = None
+                st.session_state.user_id = None
+                st.session_state.confirm_reset = False
+                st.rerun()
+        with col2:
+            if st.button("❌ Annuler"):
+                st.session_state.confirm_reset = False
+                st.rerun()
 
 def main():
     """Main app"""
