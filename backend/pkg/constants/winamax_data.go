@@ -83,3 +83,41 @@ var WinamaxRakebackStatus = []models.RakebackStatus{
 	{StatusName: "Diamant", RakebackPct: 30.0},
 	{StatusName: "Red Diamond", RakebackPct: 33.0},
 }
+
+// GetMultiplierProbabilities returns the multiplier data for a given buy-in
+func GetMultiplierProbabilities(buyinCents int) []models.MultiplierExpected {
+	if data, ok := WinamaxMultipliers[buyinCents]; ok {
+		return data
+	}
+	return []models.MultiplierExpected{}
+}
+
+// GetExpectedEV calculates the expected value for a given buy-in based on multiplier probabilities
+// EV = sum of (probability * prize1 * 1/3 + probability * prize2 * 1/3 + probability * prize3 * 1/3) - buyin
+func GetExpectedEV(buyinCents int) float64 {
+	multipliers := GetMultiplierProbabilities(buyinCents)
+	if len(multipliers) == 0 {
+		return 0
+	}
+
+	var ev float64
+	for _, m := range multipliers {
+		// Each player has 1/3 chance of finishing 1st, 2nd, or 3rd
+		// EV for this multiplier = prob * (prize1/3 + prize2/3 + prize3/3)
+		avgPrize := (float64(m.Prize1Cents) + float64(m.Prize2Cents) + float64(m.Prize3Cents)) / 3.0
+		ev += m.Probability * avgPrize
+	}
+
+	// Subtract the buy-in to get net EV
+	return ev - float64(buyinCents)
+}
+
+// GetRakebackForStatus returns the rakeback percentage for a given status
+func GetRakebackForStatus(status string) float64 {
+	for _, s := range WinamaxRakebackStatus {
+		if s.StatusName == status {
+			return s.RakebackPct
+		}
+	}
+	return 0.0
+}

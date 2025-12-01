@@ -199,7 +199,7 @@ class HandHistoryHandler(FileSystemEventHandler):
                 with open(self.cache_file, 'r') as f:
                     data = json.load(f)
                     self.uploaded_files = set(data.get("uploaded_files", []))
-                print(f"📂 {len(self.uploaded_files)} fichiers déjà traités")
+                print(f"📂 {{len(self.uploaded_files)}} fichiers déjà traités")
             except:
                 pass
 
@@ -451,12 +451,26 @@ def results_page():
 
     user_id = st.session_state.user_id
 
-    # Get tournaments
+    # Get tournaments and user data
     tournaments = api_call(f"/tournaments/{user_id}")
+    user_data = api_call(f"/user/{user_id}")
 
     if not tournaments:
         st.warning("No tournaments found. Import some hand histories first!")
         return
+
+    # Get user rakeback status
+    user_status = user_data.get('status', 'Aluminium') if user_data else 'Aluminium'
+    rakeback_pct_map = {
+        'Aluminium': 0,
+        'Bronze': 10.0,
+        'Argent': 15.0,
+        'Or': 20.0,
+        'Platine': 25.0,
+        'Diamant': 30.0,
+        'Red Diamond': 33.0
+    }
+    rakeback_pct = rakeback_pct_map.get(user_status, 0)
 
     # Convert to DataFrame
     df = pd.DataFrame(tournaments)
@@ -464,6 +478,9 @@ def results_page():
     df['buyin_euros'] = df['buyin_cents'] / 100
     df['net_result_euros'] = df['net_result_cents'] / 100
     df['ev_euros'] = df['ev_cents'] / 100
+    df['rake_euros'] = df['rake_cents'] / 100
+    df['rakeback_euros'] = df['rake_euros'] * (rakeback_pct / 100.0)
+    df['result_with_rakeback_euros'] = df['net_result_euros'] + df['rakeback_euros']
 
     # Date range filter
     st.subheader("🗓️ Filtres")
@@ -484,7 +501,7 @@ def results_page():
         return
 
     # Summary metrics
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
         st.metric("Total Tournaments", len(df))
@@ -492,9 +509,12 @@ def results_page():
         total_profit = df['net_result_euros'].sum()
         st.metric("Total Profit", f"€{total_profit:.2f}")
     with col3:
-        avg_roi = (df['net_result_euros'].sum() / (df['buyin_euros'].sum() + df['rake_cents'].sum()/100)) * 100
-        st.metric("ROI", f"{avg_roi:.2f}%")
+        total_rakeback = df['rakeback_euros'].sum()
+        st.metric(f"Rakeback ({user_status})", f"€{total_rakeback:.2f}")
     with col4:
+        total_with_rb = df['result_with_rakeback_euros'].sum()
+        st.metric("Profit + Rakeback", f"€{total_with_rb:.2f}")
+    with col5:
         total_ev = df['ev_euros'].sum()
         st.metric("Total EV", f"€{total_ev:.2f}")
 
@@ -504,6 +524,7 @@ def results_page():
     st.subheader("Bankroll Evolution")
     df_sorted = df.sort_values('start_time').reset_index(drop=True)
     df_sorted['cumulative'] = df_sorted['net_result_euros'].cumsum()
+    df_sorted['cumulative_with_rakeback'] = df_sorted['result_with_rakeback_euros'].cumsum()
     df_sorted['tournament_number'] = range(1, len(df_sorted) + 1)
 
     fig = go.Figure()
@@ -511,9 +532,18 @@ def results_page():
         x=df_sorted['tournament_number'],
         y=df_sorted['cumulative'],
         mode='lines+markers',
-        name='Bankroll',
-        line=dict(color='green', width=2),
+        name='Sans Rakeback',
+        line=dict(color='orange', width=2),
         hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<br>Date: %{customdata}<extra></extra>',
+        customdata=df_sorted['start_time'].dt.strftime('%Y-%m-%d %H:%M')
+    ))
+    fig.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative_with_rakeback'],
+        mode='lines+markers',
+        name=f'Avec Rakeback ({user_status} {rakeback_pct}%)',
+        line=dict(color='green', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit+RB: €%{y:.2f}<br>Date: %{customdata}<extra></extra>',
         customdata=df_sorted['start_time'].dt.strftime('%Y-%m-%d %H:%M')
     ))
     fig.update_layout(
@@ -533,7 +563,7 @@ def results_page():
         x=df_sorted['tournament_number'],
         y=df_sorted['cumulative_ev'],
         mode='lines+markers',
-        name='EV',
+        name='EV Théorique',
         line=dict(color='blue', width=2),
         hovertemplate='Tournoi #%{x}<br>EV: €%{y:.2f}<extra></extra>'
     ))
@@ -541,15 +571,24 @@ def results_page():
         x=df_sorted['tournament_number'],
         y=df_sorted['cumulative'],
         mode='lines+markers',
-        name='Résultats Réels',
-        line=dict(color='green', width=2, dash='dash'),
+        name='Résultats Réels (sans RB)',
+        line=dict(color='orange', width=2, dash='dash'),
         hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<extra></extra>'
     ))
+    fig2.add_trace(go.Scatter(
+        x=df_sorted['tournament_number'],
+        y=df_sorted['cumulative_with_rakeback'],
+        mode='lines+markers',
+        name=f'Résultats + Rakeback ({rakeback_pct}%)',
+        line=dict(color='green', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit+RB: €%{y:.2f}<extra></extra>'
+    ))
     fig2.update_layout(
-        title="EV vs Résultats Réels",
+        title="EV vs Résultats Réels (avec Rakeback)",
         xaxis_title="Numéro de Tournoi",
         yaxis_title="Valeur (€)",
-        hovermode='x unified'
+        hovermode='x unified',
+        legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01)
     )
     st.plotly_chart(fig2, use_container_width=True)
 
