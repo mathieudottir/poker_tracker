@@ -421,25 +421,8 @@ if __name__ == "__main__":
 
     st.divider()
 
-    # Manual import
-    st.subheader("📁 Import from Server Directory")
-
-    import_dir = st.text_input("Directory Path", value="./examples")
-
-    if st.button("Import from Directory"):
-        with st.spinner("Importing tournaments..."):
-            result = api_call("/import/directory", "POST", {
-                "user_id": user_id,
-                "directory": import_dir
-            })
-            if result:
-                st.success(f"✅ Imported {result.get('count', 0)} tournaments")
-                st.rerun()
-
-    st.divider()
-
     # Import logs
-    st.subheader("Import Logs")
+    st.subheader("📜 Historique d'Import")
     logs = api_call("/import/logs")
     if logs:
         for log in logs[-20:]:  # Show last 20 logs
