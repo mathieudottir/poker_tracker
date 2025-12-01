@@ -1,0 +1,17 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  dbname: "poker_tracker"
+  sslmode: "disable"
+
+logging:
+  level: "info"
+  file: "logs/poker_tracker.log"
+
+dev_mode: true
