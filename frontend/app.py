@@ -171,11 +171,8 @@ def import_page():
         </script>
         """
 
-        file_data = components.html(folder_html, height=150)
-
-        if file_data and len(file_data) > 0:
-            st.success(f"✅ {len(file_data)} fichiers .txt sélectionnés")
-            st.write("Pour importer, utilisez la méthode 'Sélectionner des fichiers individuels' et faites Ctrl+A dans votre dossier.")
+        components.html(folder_html, height=150)
+        st.info("ℹ️ Après avoir sélectionné votre dossier, utilisez la méthode 'Sélectionner des fichiers individuels' en bas et faites Ctrl+A pour importer tous les fichiers.")
 
     else:
         st.info("💡 **Astuce:** Ouvrez votre dossier Winamax HandHistory, faites Ctrl+A (ou Cmd+A sur Mac) pour tout sélectionner, puis cliquez sur 'Browse files' ci-dessous.")
@@ -269,6 +266,24 @@ def results_page():
     df['net_result_euros'] = df['net_result_cents'] / 100
     df['ev_euros'] = df['ev_cents'] / 100
 
+    # Date range filter
+    st.subheader("🗓️ Filtres")
+    col1, col2 = st.columns(2)
+    with col1:
+        min_date = df['start_time'].min().date()
+        max_date = df['start_time'].max().date()
+        start_date = st.date_input("Date de début", value=min_date, min_value=min_date, max_value=max_date)
+    with col2:
+        end_date = st.date_input("Date de fin", value=max_date, min_value=min_date, max_value=max_date)
+
+    # Filter dataframe
+    mask = (df['start_time'].dt.date >= start_date) & (df['start_time'].dt.date <= end_date)
+    df = df[mask]
+
+    if len(df) == 0:
+        st.warning("Aucun tournoi dans cette plage de dates")
+        return
+
     # Summary metrics
     col1, col2, col3, col4 = st.columns(4)
 
@@ -288,59 +303,79 @@ def results_page():
 
     # Bankroll curve
     st.subheader("Bankroll Evolution")
-    df_sorted = df.sort_values('start_time')
+    df_sorted = df.sort_values('start_time').reset_index(drop=True)
     df_sorted['cumulative'] = df_sorted['net_result_euros'].cumsum()
+    df_sorted['tournament_number'] = range(1, len(df_sorted) + 1)
 
     fig = go.Figure()
     fig.add_trace(go.Scatter(
-        x=df_sorted['start_time'],
+        x=df_sorted['tournament_number'],
         y=df_sorted['cumulative'],
         mode='lines+markers',
         name='Bankroll',
-        line=dict(color='green', width=2)
+        line=dict(color='green', width=2),
+        hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<br>Date: %{customdata}<extra></extra>',
+        customdata=df_sorted['start_time'].dt.strftime('%Y-%m-%d %H:%M')
     ))
     fig.update_layout(
-        title="Bankroll Evolution",
-        xaxis_title="Date",
+        title="Évolution de la Bankroll",
+        xaxis_title="Numéro de Tournoi",
         yaxis_title="Profit (€)",
         hovermode='x unified'
     )
     st.plotly_chart(fig, use_container_width=True)
 
     # EV curve
-    st.subheader("EV Evolution")
+    st.subheader("Évolution EV vs Résultats Réels")
     df_sorted['cumulative_ev'] = df_sorted['ev_euros'].cumsum()
 
     fig2 = go.Figure()
     fig2.add_trace(go.Scatter(
-        x=df_sorted['start_time'],
+        x=df_sorted['tournament_number'],
         y=df_sorted['cumulative_ev'],
         mode='lines+markers',
         name='EV',
-        line=dict(color='blue', width=2)
+        line=dict(color='blue', width=2),
+        hovertemplate='Tournoi #%{x}<br>EV: €%{y:.2f}<extra></extra>'
     ))
     fig2.add_trace(go.Scatter(
-        x=df_sorted['start_time'],
+        x=df_sorted['tournament_number'],
         y=df_sorted['cumulative'],
         mode='lines+markers',
-        name='Actual',
-        line=dict(color='green', width=2, dash='dash')
+        name='Résultats Réels',
+        line=dict(color='green', width=2, dash='dash'),
+        hovertemplate='Tournoi #%{x}<br>Profit: €%{y:.2f}<extra></extra>'
     ))
     fig2.update_layout(
-        title="EV vs Actual Results",
-        xaxis_title="Date",
-        yaxis_title="Value (€)",
+        title="EV vs Résultats Réels",
+        xaxis_title="Numéro de Tournoi",
+        yaxis_title="Valeur (€)",
         hovermode='x unified'
     )
     st.plotly_chart(fig2, use_container_width=True)
 
     # Multiplier distribution
-    st.subheader("Multiplier Distribution")
-    mult_dist = api_call(f"/stats/{user_id}/multipliers")
-    if mult_dist:
-        mult_df = pd.DataFrame(list(mult_dist.items()), columns=['Multiplier', 'Count'])
-        fig3 = px.bar(mult_df, x='Multiplier', y='Count', title='Multipliers Obtained')
-        st.plotly_chart(fig3, use_container_width=True)
+    st.subheader("Distribution des Multiplicateurs")
+    try:
+        mult_dist = api_call(f"/stats/{user_id}/multipliers")
+        if mult_dist and isinstance(mult_dist, dict):
+            mult_df = pd.DataFrame(list(mult_dist.items()), columns=['Multiplicateur', 'Nombre'])
+            mult_df['Multiplicateur'] = mult_df['Multiplicateur'].astype(int)
+            mult_df = mult_df.sort_values('Multiplicateur')
+            fig3 = px.bar(mult_df, x='Multiplicateur', y='Nombre',
+                         title='Multiplicateurs Obtenus',
+                         color='Nombre',
+                         color_continuous_scale='Greens')
+            st.plotly_chart(fig3, use_container_width=True)
+        else:
+            # Calculate from filtered data if API fails
+            mult_counts = df['multiplier'].value_counts().sort_index()
+            fig3 = px.bar(x=mult_counts.index, y=mult_counts.values,
+                         labels={'x': 'Multiplicateur', 'y': 'Nombre'},
+                         title='Multiplicateurs Obtenus')
+            st.plotly_chart(fig3, use_container_width=True)
+    except Exception as e:
+        st.error(f"Erreur lors du chargement des multiplicateurs: {str(e)}")
 
     st.divider()
 
