@@ -44,6 +44,9 @@ export default function Settings({ user, setUser }: PageProps) {
     setHhDirectory(user.hh_directory || '')
   }, [user, router])
 
+  // Return null during SSR or if no user
+  if (!user) return null
+
   const handleUpdateSettings = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -92,8 +95,6 @@ export default function Settings({ user, setUser }: PageProps) {
       setLoading(false)
     }
   }
-
-  if (!user) return null
 
   return (
     <div className="min-h-screen bg-gray-900">
