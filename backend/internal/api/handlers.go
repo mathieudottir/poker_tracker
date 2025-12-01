@@ -279,8 +279,11 @@ func (api *API) handleImportDirectory(w http.ResponseWriter, r *http.Request) {
 }
 
 func (api *API) handleImportFiles(w http.ResponseWriter, r *http.Request) {
-	// Parse multipart form (max 100MB)
-	if err := r.ParseMultipartForm(100 << 20); err != nil {
+	// Set max request body size to 500MB
+	r.Body = http.MaxBytesReader(w, r.Body, 500<<20)
+
+	// Parse multipart form (max 500MB)
+	if err := r.ParseMultipartForm(500 << 20); err != nil {
 		http.Error(w, "Failed to parse form: "+err.Error(), http.StatusBadRequest)
 		return
 	}
