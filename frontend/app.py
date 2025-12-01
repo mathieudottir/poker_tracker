@@ -103,134 +103,126 @@ def import_page():
 
     user_id = st.session_state.user_id
 
-    # Watcher status
-    st.subheader("⚙️ Surveillance Automatique (Watcher)")
-    st.info("""
-    ℹ️ Le watcher surveille un **dossier sur le serveur** pour importer automatiquement les nouveaux fichiers.
+    # Watcher status (collapsed by default)
+    with st.expander("⚙️ Surveillance Automatique (Watcher) - Avancé"):
+        st.warning("""
+        ⚠️ **Ce mode est pour utilisateurs avancés seulement.**
 
-    **Pour importer depuis votre PC**, utilisez plutôt l'**upload de fichiers** ci-dessous ! 👇
-    """)
+        Le watcher surveille un **dossier sur le SERVEUR** (pas votre PC).
+        Pour la plupart des utilisateurs, l'upload de fichiers ci-dessous est bien plus simple !
+        """)
 
-    watcher_status = api_call(f"/watcher/status/{user_id}")
+        watcher_status = api_call(f"/watcher/status/{user_id}")
 
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        if watcher_status and watcher_status.get('running'):
-            st.success(f"✅ Watcher actif sur: {watcher_status.get('directory')}")
-        else:
-            st.warning("⚠️ Watcher inactif")
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            if watcher_status and watcher_status.get('running'):
+                st.success(f"✅ Watcher actif sur: {watcher_status.get('directory')}")
+            else:
+                st.info("⚠️ Watcher inactif")
 
-    with col2:
-        if watcher_status and watcher_status.get('running'):
-            if st.button("⏸️ Arrêter", type="secondary"):
-                result = api_call("/watcher/stop", "POST", {"user_id": user_id})
-                if result:
-                    st.success("Watcher arrêté")
-                st.rerun()
-        else:
-            if st.button("▶️ Démarrer", type="primary"):
-                user_data = api_call(f"/user/{user_id}")
-                if user_data and user_data.get('hh_directory'):
-                    result = api_call("/watcher/start", "POST", {
-                        "user_id": user_id,
-                        "directory": user_data['hh_directory']
-                    })
+        with col2:
+            if watcher_status and watcher_status.get('running'):
+                if st.button("⏸️ Arrêter", type="secondary"):
+                    result = api_call("/watcher/stop", "POST", {"user_id": user_id})
                     if result:
-                        st.success("Watcher démarré!")
-                        st.rerun()
+                        st.success("Watcher arrêté")
+                    st.rerun()
+            else:
+                if st.button("▶️ Démarrer", type="primary"):
+                    user_data = api_call(f"/user/{user_id}")
+                    if user_data and user_data.get('hh_directory'):
+                        result = api_call("/watcher/start", "POST", {
+                            "user_id": user_id,
+                            "directory": user_data['hh_directory']
+                        })
+                        if result:
+                            st.success("Watcher démarré!")
+                            st.rerun()
+                        else:
+                            st.error("❌ Le dossier n'existe pas sur le serveur. Allez dans Settings pour le créer.")
                     else:
-                        st.error("❌ Erreur 500: Le dossier n'existe probablement pas sur le serveur. Allez dans Settings pour le créer.")
-                else:
-                    st.error("⚠️ Configurez d'abord le chemin dans Settings")
+                        st.error("⚠️ Configurez d'abord le chemin dans Settings")
 
     st.divider()
 
     # File upload import
-    st.subheader("📤 Upload Hand Histories")
+    st.subheader("📤 Importer vos Hand Histories")
 
-    upload_method = st.radio(
-        "Méthode d'import :",
-        ["📁 Sélectionner un dossier complet", "📄 Sélectionner des fichiers individuels"],
-        key="upload_method"
+    with st.expander("📖 **Comment importer tous vos fichiers en 3 clics**", expanded=True):
+        st.markdown("""
+        1. 📁 Sur votre PC, ouvrez votre dossier **Winamax HandHistory**
+           - Windows: `C:\\Users\\VotreNom\\AppData\\Local\\Programs\\WinamaxPoker\\HandHistory\\VotreNom`
+           - Mac: `~/Library/Application Support/WinamaxPoker/HandHistory/VotreNom`
+
+        2. ⌨️ Sélectionnez **TOUS** les fichiers .txt
+           - Windows: **Ctrl + A**
+           - Mac: **Cmd + A**
+
+        3. 🎯 **Glissez-déposez** les fichiers ci-dessous
+           - OU cliquez "Browse files" et validez
+
+        💡 **Vous pouvez importer des milliers de fichiers d'un coup !**
+        """)
+
+    uploaded_files = st.file_uploader(
+        "📁 Glissez-déposez vos fichiers .txt ici",
+        type=['txt'],
+        accept_multiple_files=True,
+        help="Faites Ctrl+A dans votre dossier HandHistory pour tout sélectionner, puis glissez ici",
+        key="file_uploader"
     )
 
-    if upload_method == "📁 Sélectionner un dossier complet":
-        st.info("💡 Cliquez sur 'Choisir un dossier', puis sélectionnez votre dossier Winamax HandHistory. Tous les fichiers .txt seront importés automatiquement.")
+    if uploaded_files:
+        st.success(f"✅ **{len(uploaded_files)} fichier(s)** prêts à être importés")
 
-        # HTML folder picker
-        folder_html = """
-        <div style="padding: 20px; border: 2px dashed #4CAF50; border-radius: 10px; text-align: center; background-color: #f9f9f9;">
-            <input type="file" id="folderInput" webkitdirectory directory multiple style="display: none;" />
-            <button onclick="document.getElementById('folderInput').click();"
-                    style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
-                📁 Choisir un dossier
-            </button>
-            <p id="fileCount" style="margin-top: 10px; color: #666;"></p>
-        </div>
-        <script>
-        const fileInput = document.getElementById('folderInput');
-        fileInput.addEventListener('change', function(e) {
-            const files = Array.from(e.target.files).filter(f => f.name.endsWith('.txt'));
-            document.getElementById('fileCount').textContent = files.length + ' fichiers .txt trouvés';
+        if st.button("🚀 IMPORTER", type="primary", use_container_width=True):
+            with st.spinner(f"⏳ Traitement de {len(uploaded_files)} fichier(s)..."):
+                import tempfile
+                import shutil
 
-            // Send files to Streamlit
-            const fileData = files.map(f => ({
-                name: f.name,
-                size: f.size
-            }));
-            window.parent.postMessage({type: 'streamlit:setComponentValue', value: fileData}, '*');
-        });
-        </script>
-        """
+                # Create temp directory
+                temp_dir = tempfile.mkdtemp()
 
-        components.html(folder_html, height=150)
-        st.info("ℹ️ Après avoir sélectionné votre dossier, utilisez la méthode 'Sélectionner des fichiers individuels' en bas et faites Ctrl+A pour importer tous les fichiers.")
+                try:
+                    # Save uploaded files with progress
+                    progress_text = st.empty()
+                    progress_bar = st.progress(0)
 
-    else:
-        st.info("💡 **Astuce:** Ouvrez votre dossier Winamax HandHistory, faites Ctrl+A (ou Cmd+A sur Mac) pour tout sélectionner, puis cliquez sur 'Browse files' ci-dessous.")
+                    for idx, uploaded_file in enumerate(uploaded_files):
+                        progress_text.text(f"📥 Téléchargement {idx+1}/{len(uploaded_files)}: {uploaded_file.name}")
+                        file_path = os.path.join(temp_dir, uploaded_file.name)
+                        with open(file_path, 'wb') as f:
+                            f.write(uploaded_file.getbuffer())
+                        progress_bar.progress((idx + 1) / len(uploaded_files))
 
-        uploaded_files = st.file_uploader(
-            "Sélectionnez vos fichiers hand history (.txt)",
-            type=['txt'],
-            accept_multiple_files=True,
-            help="Vous pouvez sélectionner plusieurs fichiers en même temps avec Ctrl+A",
-            key="file_uploader"
-        )
+                    progress_text.text("🔍 Analyse et import des tournois...")
 
-        if uploaded_files:
-            st.info(f"📊 {len(uploaded_files)} fichier(s) sélectionné(s)")
-            if st.button("🚀 Importer les fichiers", type="primary"):
-                with st.spinner(f"Import de {len(uploaded_files)} fichier(s) en cours..."):
-                    import tempfile
-                    import shutil
+                    # Import from temp directory
+                    result = api_call("/import/directory", "POST", {
+                        "user_id": user_id,
+                        "directory": temp_dir
+                    })
 
-                    # Create temp directory
-                    temp_dir = tempfile.mkdtemp()
+                    progress_bar.empty()
+                    progress_text.empty()
 
-                    try:
-                        # Save uploaded files to temp directory
-                        for uploaded_file in uploaded_files:
-                            file_path = os.path.join(temp_dir, uploaded_file.name)
-                            with open(file_path, 'wb') as f:
-                                f.write(uploaded_file.getbuffer())
+                    if result:
+                        st.success(f"""
+                        🎉 **Import réussi !**
 
-                        # Import from temp directory
-                        result = api_call("/import/directory", "POST", {
-                            "user_id": user_id,
-                            "directory": temp_dir
-                        })
-
-                        if result:
-                            st.success(f"✅ Importé {result.get('count', 0)} tournois depuis {len(uploaded_files)} fichier(s)")
-                            st.balloons()
-                            st.rerun()
-                        else:
-                            st.error("❌ Erreur lors de l'import")
-                    except Exception as e:
-                        st.error(f"❌ Erreur: {str(e)}")
-                    finally:
-                        # Cleanup temp directory
-                        shutil.rmtree(temp_dir, ignore_errors=True)
+                        - 📊 **{result.get('count', 0)} tournois** importés
+                        - 📁 Depuis **{len(uploaded_files)} fichiers**
+                        """)
+                        st.balloons()
+                        st.rerun()
+                    else:
+                        st.error("❌ Erreur lors de l'import des tournois")
+                except Exception as e:
+                    st.error(f"❌ Erreur: {str(e)}")
+                finally:
+                    # Cleanup temp directory
+                    shutil.rmtree(temp_dir, ignore_errors=True)
 
     st.divider()
 
