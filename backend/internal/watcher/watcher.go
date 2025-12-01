@@ -3,7 +3,6 @@ package watcher
 import (
 	"context"
 	"log"
-	"path/filepath"
 	"strings"
 	"sync"
 	"time"
