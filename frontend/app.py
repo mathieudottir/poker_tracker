@@ -104,32 +104,44 @@ def import_page():
     user_id = st.session_state.user_id
 
     # Watcher status
-    st.subheader("Real-Time Watcher")
+    st.subheader("⚙️ Surveillance Automatique (Watcher)")
+    st.info("""
+    ℹ️ Le watcher surveille un **dossier sur le serveur** pour importer automatiquement les nouveaux fichiers.
+
+    **Pour importer depuis votre PC**, utilisez plutôt l'**upload de fichiers** ci-dessous ! 👇
+    """)
+
     watcher_status = api_call(f"/watcher/status/{user_id}")
 
     col1, col2 = st.columns([2, 1])
     with col1:
         if watcher_status and watcher_status.get('running'):
-            st.success(f"✅ Watcher is running on: {watcher_status.get('directory')}")
+            st.success(f"✅ Watcher actif sur: {watcher_status.get('directory')}")
         else:
-            st.warning("⚠️ Watcher is not running")
+            st.warning("⚠️ Watcher inactif")
 
     with col2:
         if watcher_status and watcher_status.get('running'):
-            if st.button("Stop Watcher", type="secondary"):
-                api_call("/watcher/stop", "POST", {"user_id": user_id})
+            if st.button("⏸️ Arrêter", type="secondary"):
+                result = api_call("/watcher/stop", "POST", {"user_id": user_id})
+                if result:
+                    st.success("Watcher arrêté")
                 st.rerun()
         else:
-            if st.button("Start Watcher", type="primary"):
+            if st.button("▶️ Démarrer", type="primary"):
                 user_data = api_call(f"/user/{user_id}")
                 if user_data and user_data.get('hh_directory'):
-                    api_call("/watcher/start", "POST", {
+                    result = api_call("/watcher/start", "POST", {
                         "user_id": user_id,
                         "directory": user_data['hh_directory']
                     })
-                    st.rerun()
+                    if result:
+                        st.success("Watcher démarré!")
+                        st.rerun()
+                    else:
+                        st.error("❌ Erreur 500: Le dossier n'existe probablement pas sur le serveur. Allez dans Settings pour le créer.")
                 else:
-                    st.error("Please set HH directory in Settings first")
+                    st.error("⚠️ Configurez d'abord le chemin dans Settings")
 
     st.divider()
 
@@ -458,11 +470,30 @@ def settings_page():
 
     player_name = st.text_input("Winamax Player Name", value=user.get('player_name', ''))
 
+    st.subheader("📁 Hand History Directory (pour Watcher)")
+    st.info("""
+    ⚠️ **Important:** Ce chemin est sur le SERVEUR, pas sur votre PC.
+
+    - ✅ **Pour importer depuis votre PC** → Utilisez l'upload de fichiers dans l'onglet Import
+    - ⚙️ **Pour surveiller un dossier serveur** → Configurez ce chemin (avancé)
+    """)
+
     hh_directory = st.text_input(
-        "Hand History Directory",
+        "Chemin serveur (optionnel)",
         value=user.get('hh_directory', ''),
-        help="Path to your Winamax hand history folder"
+        placeholder="/home/mathieudottir/winamax_hh",
+        help="Chemin absolu sur le serveur pour la surveillance automatique"
     )
+
+    if st.button("📁 Créer le dossier sur le serveur"):
+        import os
+        server_path = "/home/mathieudottir/winamax_hh"
+        try:
+            os.makedirs(server_path, exist_ok=True)
+            st.success(f"✅ Dossier créé: {server_path}")
+            hh_directory = server_path
+        except Exception as e:
+            st.error(f"❌ Erreur: {str(e)}")
 
     # Winamax status
     rakeback_statuses = api_call("/winamax/rakeback")
