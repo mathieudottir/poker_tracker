@@ -88,7 +88,7 @@ export default function Dashboard({ user, setUser }: PageProps) {
   )
 
   // Rakeback calculation
-  const rakebackPct = {
+  const rakebackMap: Record<string, number> = {
     Aluminium: 0,
     Bronze: 10,
     Argent: 15,
@@ -96,7 +96,8 @@ export default function Dashboard({ user, setUser }: PageProps) {
     Platine: 25,
     Diamant: 30,
     'Red Diamond': 33,
-  }[user.status || 'Aluminium'] || 0
+  }
+  const rakebackPct = rakebackMap[user.status || 'Aluminium'] || 0
 
   const totalRakeback = (totalRake * rakebackPct) / 100
   const profitWithRakeback = totalProfit + totalRakeback
