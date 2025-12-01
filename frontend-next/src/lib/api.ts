@@ -24,8 +24,9 @@ export interface User {
   id: number;
   username: string;
   player_name: string;
-  status: string;
+  wina_status: string;
   hh_directory: string;
+  dev_mode: boolean;
 }
 
 export interface Stats {
@@ -81,6 +82,17 @@ export const api = {
 
   // User
   getUser: (userId: number) => apiCall<User>(`/user/${userId}`),
+
+  updateSettings: (userId: number, playerName: string, winaStatus: string, hhDirectory: string, devMode: boolean) =>
+    apiCall<{ status: string }>(`/user/${userId}/settings`, 'PUT', {
+      player_name: playerName,
+      wina_status: winaStatus,
+      hh_directory: hhDirectory,
+      dev_mode: devMode,
+    }),
+
+  deleteUserData: (userId: number) =>
+    apiCall<{ status: string }>(`/user/${userId}/data`, 'DELETE'),
 
   // Tournaments
   getTournaments: (userId: number) =>

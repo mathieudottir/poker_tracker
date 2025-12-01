@@ -94,14 +94,16 @@ export default function Dashboard({ user, setUser }: PageProps) {
   // Rakeback calculation
   const rakebackMap: Record<string, number> = {
     Aluminium: 0,
-    Bronze: 10,
-    Argent: 15,
-    Or: 20,
-    Platine: 25,
-    Diamant: 30,
-    'Red Diamond': 33,
+    Bronze: 20,
+    Argent: 25,
+    Or: 30,
+    Platine: 35,
+    'Diamond 1': 40,
+    'Diamond 2': 44,
+    'Diamond 3': 48,
+    'Diamond 4': 52,
   }
-  const rakebackPct = rakebackMap[user.status || 'Aluminium'] || 0
+  const rakebackPct = rakebackMap[user.wina_status || 'Aluminium'] || 0
 
   const totalRakeback = (totalRake * rakebackPct) / 100
   const profitWithRakeback = totalProfit + totalRakeback
@@ -162,10 +164,16 @@ export default function Dashboard({ user, setUser }: PageProps) {
                 🃏 Winamax Expresso Tracker
               </h1>
               <p className="text-gray-400">
-                Bienvenue, {user.player_name} ({user.status})
+                Bienvenue, {user.player_name} ({user.wina_status})
               </p>
             </div>
             <div className="flex gap-4">
+              <Link
+                href="/settings"
+                className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+              >
+                ⚙️ Settings
+              </Link>
               <Link
                 href="/import"
                 className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
@@ -235,7 +243,7 @@ export default function Dashboard({ user, setUser }: PageProps) {
 
           <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             <div className="text-gray-400 text-sm mb-1">
-              Rakeback ({user.status} {rakebackPct}%)
+              Rakeback ({user.wina_status} {rakebackPct}%)
             </div>
             <div className="text-3xl font-bold text-green-400">
               €{totalRakeback.toFixed(2)}
