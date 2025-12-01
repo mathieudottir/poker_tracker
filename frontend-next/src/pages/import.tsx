@@ -8,6 +8,10 @@ interface PageProps {
   setUser: (user: any) => void
 }
 
+export async function getServerSideProps() {
+  return { props: {} }
+}
+
 export default function Import({ user, setUser }: PageProps) {
   const router = useRouter()
   const fileInputRef = useRef<HTMLInputElement>(null)

@@ -7,6 +7,10 @@ interface PageProps {
   setUser: (user: any) => void
 }
 
+export async function getServerSideProps() {
+  return { props: {} }
+}
+
 export default function Home({ user, setUser }: PageProps) {
   const router = useRouter()
   const [username, setUsername] = useState('')

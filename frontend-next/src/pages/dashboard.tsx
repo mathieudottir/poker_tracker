@@ -21,6 +21,10 @@ interface PageProps {
   setUser: (user: any) => void
 }
 
+export async function getServerSideProps() {
+  return { props: {} }
+}
+
 export default function Dashboard({ user, setUser }: PageProps) {
   const router = useRouter()
   const [tournaments, setTournaments] = useState<Tournament[]>([])
