@@ -6,6 +6,7 @@ echo ""
 # Arrêter les anciens processus
 pkill -f 'go run' 2>/dev/null
 pkill -f 'streamlit' 2>/dev/null
+sleep 1
 
 # PostgreSQL devrait déjà tourner
 if ! ps aux | grep -v grep | grep postgres > /dev/null; then
@@ -19,12 +20,15 @@ echo "✅ PostgreSQL tourne"
 # Créer la DB en tant qu'utilisateur actuel (pas postgres)
 echo "📊 Configuration de la base de données..."
 
+# S'assurer que le mot de passe postgres est configuré
+psql -U postgres -d postgres -c "ALTER USER postgres PASSWORD 'postgres';" 2>/dev/null || true
+
 # Se connecter en tant que superuser (l'utilisateur système courant)
-psql -d postgres -c "CREATE DATABASE poker_tracker;" 2>/dev/null || echo "DB existe déjà"
+psql -U postgres -d postgres -c "CREATE DATABASE poker_tracker;" 2>/dev/null || echo "DB existe déjà"
 
 # Appliquer les migrations
-psql -d poker_tracker -f backend/migrations/001_initial_schema.sql -q 2>/dev/null
-psql -d poker_tracker -f backend/migrations/002_seed_winamax_data.sql -q 2>/dev/null
+psql -U postgres -d poker_tracker -f backend/migrations/001_initial_schema.sql -q 2>/dev/null
+psql -U postgres -d poker_tracker -f backend/migrations/002_seed_winamax_data.sql -q 2>/dev/null
 
 echo "✅ Base de données prête"
 echo ""
@@ -56,7 +60,7 @@ echo ""
 # Lancer le frontend
 echo "🎨 Démarrage du frontend..."
 cd frontend
-nohup streamlit run app.py > ../logs/frontend.log 2>&1 &
+nohup streamlit run app.py --server.address 0.0.0.0 > ../logs/frontend.log 2>&1 &
 FRONTEND_PID=$!
 cd ..
 
@@ -66,7 +70,8 @@ echo ""
 echo "✅✅✅ SYSTÈME DÉMARRÉ ! ✅✅✅"
 echo ""
 echo "📍 Ouvrez votre navigateur:"
-echo "   👉 http://localhost:8501"
+echo "   👉 Local:  http://localhost:8501"
+echo "   👉 Remote: http://$(curl -s ifconfig.me 2>/dev/null || echo 'YOUR_IP'):8501"
 echo ""
 echo "🔑 Cliquez sur 'Login as Mathieu'"
 echo ""

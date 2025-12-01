@@ -89,16 +89,33 @@ func runMigrations(dsn string) error {
 
 	// Read and execute migration files
 	migrations := []string{
-		"backend/migrations/001_initial_schema.sql",
-		"backend/migrations/002_seed_winamax_data.sql",
+		"001_initial_schema.sql",
+		"002_seed_winamax_data.sql",
 	}
 
 	for _, migration := range migrations {
-		log.Printf("Running migration: %s", migration)
+		// Try multiple possible paths
+		paths := []string{
+			"migrations/" + migration,
+			"backend/migrations/" + migration,
+			"../backend/migrations/" + migration,
+		}
 
-		content, err := os.ReadFile(migration)
-		if err != nil {
-			return fmt.Errorf("failed to read migration %s: %w", migration, err)
+		var content []byte
+		var err error
+		found := false
+
+		for _, path := range paths {
+			content, err = os.ReadFile(path)
+			if err == nil {
+				found = true
+				log.Printf("Running migration: %s", path)
+				break
+			}
+		}
+
+		if !found {
+			return fmt.Errorf("failed to find migration %s in any expected location", migration)
 		}
 
 		if _, err := db.Exec(string(content)); err != nil {
