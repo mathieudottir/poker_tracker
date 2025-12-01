@@ -1,5 +1,11 @@
 .PHONY: help build run stop clean db-setup dev-user test
 
+# Detect docker compose command
+DOCKER_COMPOSE := $(shell command -v docker-compose 2> /dev/null)
+ifndef DOCKER_COMPOSE
+	DOCKER_COMPOSE := docker compose
+endif
+
 help:
 	@echo "Winamax Expresso Tracker - Makefile Commands"
 	@echo ""
@@ -14,10 +20,10 @@ help:
 	@echo ""
 
 build:
-	docker-compose build
+	$(DOCKER_COMPOSE) build
 
 run:
-	docker-compose up -d
+	$(DOCKER_COMPOSE) up -d
 	@echo "✅ System started!"
 	@echo "Backend API: http://localhost:8080"
 	@echo "Frontend UI: http://localhost:8501"
@@ -27,14 +33,14 @@ run:
 	@make dev-user
 
 stop:
-	docker-compose down
+	$(DOCKER_COMPOSE) down
 
 clean:
-	docker-compose down -v
+	$(DOCKER_COMPOSE) down -v
 	rm -rf logs/*
 
 db-setup:
-	docker-compose exec postgres psql -U postgres -d poker_tracker -c "SELECT version();"
+	$(DOCKER_COMPOSE) exec postgres psql -U postgres -d poker_tracker -c "SELECT version();"
 
 dev-user:
 	@curl -X POST http://localhost:8080/api/auth/register \
@@ -51,16 +57,16 @@ test:
 	cd backend && go test ./...
 
 logs:
-	docker-compose logs -f
+	$(DOCKER_COMPOSE) logs -f
 
 logs-backend:
-	docker-compose logs -f backend
+	$(DOCKER_COMPOSE) logs -f backend
 
 logs-frontend:
-	docker-compose logs -f frontend
+	$(DOCKER_COMPOSE) logs -f frontend
 
 logs-db:
-	docker-compose logs -f postgres
+	$(DOCKER_COMPOSE) logs -f postgres
 
 # Development shortcuts
 dev-backend:
